@@ -3,8 +3,6 @@ import { Subscription } from 'rxjs';
 import { StorageService } from './components/_services/storage.service';
 import { AuthService } from './components/_services/auth.service';
 import { EventBusService } from './components/_shared/event-bus.service';
-import { ReCaptchaService } from './re-captcha.service';
-import { ReCaptchaV3Service } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +11,7 @@ import { ReCaptchaV3Service } from 'ng-recaptcha';
 })
 export class AppComponent {
   private roles: string[] = [];
+
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
