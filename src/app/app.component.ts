@@ -18,6 +18,7 @@ export class AppComponent {
   username?: string;
 
   eventBusSub?: Subscription;
+  title: any;
 
   constructor(
     private storageService: StorageService,

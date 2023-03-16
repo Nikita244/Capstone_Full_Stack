@@ -14,10 +14,12 @@ export class RegisterComponent implements OnInit {
     username: null,
     email: null,
     password: null
+
   };
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  showPassword = false;
 
   token: string|undefined;
 

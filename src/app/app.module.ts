@@ -10,10 +10,11 @@ import { RegisterComponent } from './components/register/register/register.compo
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './components/_helpers/http.interceptor';
-import { HomeComponent } from './components/home/home/home.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
 import { environment } from 'src/environments/environment';
 import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
+import { NavbarComponent } from './components/navbar/navbar/navbar.component';
+import { HomeComponent } from './components/home/home/home.component';
 
 
 
@@ -23,8 +24,9 @@ import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSet
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavbarComponent,
+    HomeComponent
 
   ],
   imports: [

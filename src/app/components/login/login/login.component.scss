@@ -1,11 +1,26 @@
+
+h2{
+  font-weight: 500;
+}
 label {
   display: block;
   margin-top: 10px;
+  color: white;
+  padding-bottom: 10px;
+  font-weight: 500;
+  padding-inline-start: 10px;
+
 }
 
 .card-container.card {
   max-width: 400px !important;
   padding: 40px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.068)!important;
+  backdrop-filter: blur(15px);
+  border: 1px solid white;
+
+
 }
 
 .card {
@@ -30,3 +45,32 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+#register:hover{
+font-weight: bolder;
+transition: 0.2s;
+}
+
+.form-control{
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border-radius: 50px;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../../assets/img/4232579.jpg')no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.btn{
+background-color: transparent;
+border: 1px solid white;
+font-weight: 600;
+}
+
+
