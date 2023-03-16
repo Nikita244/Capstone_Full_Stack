@@ -19,10 +19,11 @@ export class RegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
-  reCAPTCHAToken: string = "";
-    tokenVisible: boolean = false;
+  token: string|undefined;
 
-  constructor(private authService: AuthService) { }
+  formSubmitted = false;
+
+  constructor(private authService: AuthService) { this.token = undefined;}
 
   ngOnInit(): void {
   }
@@ -30,6 +31,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     const { nome, cognome, username, email, password } = this.form;
 
+    this.formSubmitted = true;
 
 
     this.authService.register(nome, cognome, username, email, password).subscribe({
@@ -37,10 +39,12 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        console.log(`Token [${this.token}] generated`);
       },
       error: err => {
         this.errorMessage = err.error.message;
         this.isSignUpFailed = true;
+
       }
     });
   }

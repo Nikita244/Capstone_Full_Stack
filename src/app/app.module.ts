@@ -12,8 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './components/_helpers/http.interceptor';
 import { HomeComponent } from './components/home/home/home.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
-import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
+import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
+
 
 
 
@@ -31,13 +32,17 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RecaptchaV3Module
+    RecaptchaModule,
+    RecaptchaFormsModule
+
 
   ],
   providers: [httpInterceptorProviders, {
-    provide: RECAPTCHA_V3_SITE_KEY,
-        useValue: environment.recaptcha.siteKey,
-    }, ],
+    provide: RECAPTCHA_SETTINGS,
+    useValue: {
+      siteKey: environment.recaptcha.siteKey,
+    } as RecaptchaSettings,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
