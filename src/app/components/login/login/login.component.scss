@@ -4,11 +4,10 @@ h2{
 }
 label {
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
-  padding-bottom: 10px;
   font-weight: 500;
-  padding-inline-start: 10px;
+
 
 }
 
@@ -16,7 +15,7 @@ label {
   max-width: 400px !important;
   padding: 40px 40px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.068)!important;
+  background: rgba(123, 123, 123, 0.120)!important;
   backdrop-filter: blur(15px);
   border: 1px solid white;
 
@@ -26,8 +25,9 @@ label {
 .card {
   background-color: #f7f7f7;
   padding: 20px 25px 30px;
-  margin: 0 auto 25px;
-  margin-top: 50px;
+  /*margin: 0 auto 25px;
+  margin-top: 50px;*/
+  margin: 0 auto;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -52,25 +52,44 @@ transition: 0.2s;
 }
 
 .form-control{
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0)!important;
   color: white;
   border-radius: 50px;
 }
+
+
 
 .login-page {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../../../../assets/img/4232579.jpg')no-repeat;
+  background: url('../../../../assets/img/sfondo2.jpg')no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden!important;
 }
 
 .btn{
 background-color: transparent;
 border: 1px solid white;
 font-weight: 600;
+}
+
+input.form-control {
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  box-shadow: none;
+
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0) inset !important;
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 
 
