@@ -39,7 +39,8 @@ label {
 
 #register:hover{
 font-weight: bolder;
-transition: 0.2s;
+transition: 0.1s;
+color: orangered!important;
 }
 
 .form-control{
@@ -69,12 +70,16 @@ border: 1px solid white;
 font-weight: 600;
 }
 
+.btn:hover{
+  background-color: orangered;
+  border-color: orangered ;
+}
+
 input.form-control {
   border: none;
   border-bottom: 1px solid white;
   border-radius: 0;
   box-shadow: none!important;
-
 }
 
 .form-control:focus{
@@ -88,6 +93,25 @@ input.form-control {
 input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover {
   -webkit-box-shadow: none!important;
   background-color: transparent!important;
+}
+input:-internal-autofill-selected{
+  background-color: transparent!important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
 .invalid-feedback {
@@ -119,12 +143,6 @@ padding: 5px ;
 }
 
 input:focus, input:valid { appearance:none!important; }
-
-
-
-/*.form-group input[autocomplete="off"] {
-  background-color: transparent!important;
-}*/
 
 .form-control{
   background-color: trasparent!important;

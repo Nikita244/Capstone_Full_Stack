@@ -1,0 +1,37 @@
+.banner-image{
+  background-image: url(../../../../assets/img/30anni.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 620px;
+  padding-top: 100px;
+  margin-top: -80px!important;
+}
+
+h1{
+  font-weight: 400;
+}
+.tuffo{
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: orangered;
+  border-color: orangered;
+}
+
+.tuffo:hover{
+  background-color: rgb(196, 53, 1);
+  border-color: rgb(196, 53, 1);
+}
+
+p{
+  line-height: 30px;
+}
+
+@media screen and (max-width: 575px){
+  .banner-image{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .banner-image p{
+    font-size: 18px;
+  }
+}

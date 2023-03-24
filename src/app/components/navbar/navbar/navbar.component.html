@@ -1,19 +1,19 @@
-<nav class="navbar  navbar-expand bg-dark fixed-top">
+<nav class="navbar  navbar-expand ps-4 pe-4 ">
   <div class="container-fluid">
 
-      <a class="navbar-brand" href="">
-        <img src="../../../../assets/img/120px-Acquario_di_Genova.svg.png" alt="Bootstrap" width="45" height="35">
+      <a class="navbar-brand" href="/">
+        <img src="../../../../assets/img/logo-acquario-di-genova-negative.png" alt="logo" >
       </a>
 
 
-      <ul class="navbar-nav me-auto mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-lg-0">
         <li class="nav-item ">
-          <a href="" class="nav-link text-white" routerLink="">Home</a>
+          <a class="nav-link text-white fw-bold" routerLink="/">Home</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
         <li class="nav-item">
-          <a href="/login" class="nav-link btn btn-primary text-white me-2 rounded-pill px-4" routerLink="login">Login</a>
+          <a href="/login" class="nav-link text-white fw-bold" routerLink="login">Login</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
@@ -27,7 +27,6 @@
 
   </div>
 </nav>
-
 
 
 
