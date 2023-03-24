@@ -1,10 +1,6 @@
 <div class="col-md-12 register ">
   <div class="card card-container">
-    <img
-      id="profile-img"
-      src="https://img.freepik.com/free-vector/flat-design-baby-shark_23-2148484775.jpg?w=826&t=st=1678990906~exp=1678991506~hmac=0f915ffd0f804fc3c7c9d2603f524e8670b210d9646e7ecb0a871976a45f7376"
-      class="profile-img-card"
-    />
+    <h2 class="text-center text-white display-6 pb-4">Registrati</h2>
     <form
       *ngIf="!isSuccessful"
       name="form"
@@ -13,12 +9,13 @@
       novalidate
     >
 
-
+<div class="d-flex justify-content-between" id="nomecognomne">
     <div class="form-group">
       <label for="nome">Nome</label>
       <input
         type="text"
         class="form-control"
+        autocomplete="off"
         name="nome"
         [(ngModel)]="form.nome"
         required
@@ -44,6 +41,7 @@
       <input
         type="text"
         class="form-control"
+        autocomplete="off"
         name="cognome"
         [(ngModel)]="form.cognome"
         required
@@ -62,6 +60,7 @@
         </div>
       </div>
     </div>
+  </div>
 
 
       <div class="form-group">
@@ -69,6 +68,7 @@
         <input
           type="text"
           class="form-control"
+          autocomplete="off"
           name="username"
           [(ngModel)]="form.username"
           required
@@ -94,6 +94,7 @@
         <input
           type="email"
           class="form-control"
+          autocomplete="off"
           name="email"
           [(ngModel)]="form.email"
           required
@@ -115,6 +116,7 @@
         <input
           type="password"
           class="form-control"
+          autocomplete="off"
           name="password"
           [(ngModel)]="form.password"
           required
@@ -131,23 +133,32 @@
         </div>
       </div>
 
-      <div class="col-sm-12 mb-2 mt-3">
+
+      <div class="col-sm-12 mb-2 mt-4 d-flex justify-content-center">
         <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
         <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
           <div *ngIf="recaptcha.errors?.['required']">Questo campo è obbligatorio.</div>
         </div>
       </div>
 
-      <div class="form-group d-flex justify-content-center mt-3">
+      <div class="form-group d-flex justify-content-center mt-4">
         <button class="btn btn-primary btn-block rounded-pill px-4">Registrati</button>
       </div>
 
-      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+      <div class="form-group d-flex justify-content-center text-white" id="register">
+        <a class="nav-link me-2 pt-4" routerLink="/login">Sei già registrato? Clicca qui</a>
+      </div>
+
+      <div class="form-group d-flex justify-content-center text-white" id="indietro">
+        <a class="nav-link me-2 pt-4" routerLink="/"><i class="bi bi-arrow-left-circle"></i></a>
+      </div>
+
+      <div class="alert alert-danger mt-3" *ngIf="f.submitted && isSignUpFailed">
        Registrazione fallita!<br />{{ errorMessage }}
       </div>
     </form>
 
-    <div class="alert alert-success" *ngIf="isSuccessful">
+    <div class="alert alert-success " *ngIf="isSuccessful">
       Registrazione avvenuta con successo!
     </div>
   </div>

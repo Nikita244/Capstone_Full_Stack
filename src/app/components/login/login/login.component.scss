@@ -12,14 +12,12 @@ label {
 }
 
 .card-container.card {
-  max-width: 400px !important;
+  max-width: 450px !important;
   padding: 40px 40px;
   border-radius: 20px;
   background: rgba(123, 123, 123, 0.120)!important;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(25px);
   border: 1px solid white;
-
-
 }
 
 .card {
@@ -60,14 +58,17 @@ transition: 0.2s;
 
 
 .login-page {
-  height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: url('../../../../assets/img/sfondo2.jpg')no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden!important;
+
+
 }
 
 .btn{
@@ -80,10 +81,17 @@ input.form-control {
   border: none;
   border-bottom: 1px solid white;
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: none!important;
 
 }
 
+.form-control:focus{
+  border-color: orangered;
+}
+
+.form-control.is-invalid{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ff4500'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff4500' stroke='none'/%3e%3c/svg%3e");
+}
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus,
@@ -92,4 +100,26 @@ input:-webkit-autofill:hover {
     background-color: rgba(255, 255, 255, 0) !important;
 }
 
+.invalid-feedback {
+background-color: #ffffff75;
+border-radius: 5px;
+color: orangered;
+font-size: 16px;
+font-weight: 600;
+padding: 5px ;
+}
+
+#alert{
+  margin-top: 20px;
+}
+
+.bi{
+  font-size: 32px;
+}
+
+.bi:hover{
+  color: orangered;
+  transition: 0.2s;
+
+}
 

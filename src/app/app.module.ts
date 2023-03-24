@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 import { NavbarComponent } from './components/navbar/navbar/navbar.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { TourComponent } from './components/tour/tour.component';
 
 
 
@@ -26,7 +27,8 @@ import { HomeComponent } from './components/home/home/home.component';
     RegisterComponent,
     ProfileComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    TourComponent
 
   ],
   imports: [

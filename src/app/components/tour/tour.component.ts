@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { StorageService } from './components/_services/storage.service';
-import { AuthService } from './components/_services/auth.service';
-import { EventBusService } from './components/_shared/event-bus.service';
+import { StorageService } from '../_services/storage.service';
+import { AuthService } from '../_services/auth.service';
+import { EventBusService } from '../_shared/event-bus.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-tour',
+  templateUrl: './tour.component.html',
+  styleUrls: ['./tour.component.scss']
 })
-export class AppComponent {
-  private roles: string[] = [];
+export class TourComponent {
 
+  private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
@@ -27,6 +27,8 @@ export class AppComponent {
   ) {}
 
   ngOnInit(): void {
+
+
     this.isLoggedIn = this.storageService.isLoggedIn();
 
     if (this.isLoggedIn) {
@@ -58,4 +60,5 @@ export class AppComponent {
       }
     });
   }
+
 }
