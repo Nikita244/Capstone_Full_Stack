@@ -26,6 +26,105 @@ p{
   line-height: 30px;
 }
 
+
+.descr{
+  background-image: url(../../../../assets/img/background-01_UN.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: -1px;
+
+}
+
+h3{
+  font-weight: 500!important;
+}
+
+
+hr {
+  margin: auto;
+  width: 50%;
+  border: none;
+  border-top: 3px solid orangered;
+  opacity: 1;
+}
+
+.squalo{
+  background-image: url("../../../../assets/img/background-squalo.jpg");
+  background-size: cover;
+  background-position: center;
+   width: 100%;
+   overflow-x: hidden;
+   background-position-y: 25%;
+   margin-top: -1px;
+}
+
+
+.pinguino{
+  background-image: url("../../../../assets/img/ghiacci.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 400px;
+  overflow-x: hidden;
+  background-position-y: 10%;
+  margin-top: -1px;
+}
+
+.medusa{
+  background-image: url("../../../../assets/img/background-04.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 400px;
+  overflow-x: hidden;
+  background-position-y: 10%;
+  margin-top: -1px;
+}
+
+
+.story{
+  background-color: #00030A;
+   margin-top: -1px;
+}
+
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+
+}
+
+.carousel-item h5 {
+  color: orangered;
+}
+
+.carousel-caption{
+  background-color: rgba(0, 0, 0, 0.534);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  backdrop-filter: blur(15px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
 @media screen and (max-width: 575px){
   .banner-image{
     padding-left: 20px;
@@ -47,5 +146,3 @@ p{
  padding-top: 110px!important;
   }
 }
-
-/*----------------------------------------------------*/

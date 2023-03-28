@@ -20,6 +20,8 @@ import { TourComponent } from './components/tour/tour.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { TourComponent } from './components/tour/tour.component';
     NavbarComponent,
     HomeComponent,
     TourComponent
+
 
   ],
   imports: [
