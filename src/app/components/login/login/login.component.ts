@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
-        this.router.navigate(['/tour']);
+        this.router.navigate(['/']);
       },
       error: err => {
         if (err && err.error && err.error.message) {

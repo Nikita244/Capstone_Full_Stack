@@ -16,6 +16,8 @@ import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSet
 import { NavbarComponent } from './components/navbar/navbar/navbar.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { TourComponent } from './components/tour/tour.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContattiComponent } from './components/contatti/contatti.component';
 
 
 
@@ -30,7 +32,9 @@ import { TourComponent } from './components/tour/tour.component';
     ProfileComponent,
     NavbarComponent,
     HomeComponent,
-    TourComponent
+    TourComponent,
+    FooterComponent,
+    ContattiComponent
 
 
   ],

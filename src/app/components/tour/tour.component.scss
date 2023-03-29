@@ -1,4 +1,58 @@
 .hero{
-  padding-top: 100px;
+  padding-top: 30px;
   margin-top: -80px!important;
+  margin-bottom: -3px;
+  background-color: #00050B !important;
+
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.banner-image {
+  background-image: url(../../../assets/img/oblo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 620px;
+  padding-top: 100px;
+  margin-top: -80px !important;
+}
+
+.banner-image p{
+  line-height: 45px;
+}
+
+
+iframe{
+  max-height: 250px!important;
+  //border-top-left-radius: 20px;
+  //border-top-right-radius: 20px;
+  border: none!important;
+
+}
+
+.card {
+  border: none!important;
+  background-color: transparent;
+
+}
+
+
+
+h5{
+  color: orangered!important;
+}
+
+.card-img-top{
+  border-radius: 0;
+  max-height: 250px!important;
+  object-fit: cover;
+}
+
+.card-body{
+  background: linear-gradient(#01052e, #00050B);
+  border: none!important;
+  //border-bottom-left-radius: 20px;
+  //border-bottom-right-radius: 20px;
 }

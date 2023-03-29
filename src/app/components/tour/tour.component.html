@@ -1,18 +1,72 @@
 <app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
 
-<div class=" text-center bg-dark hero">
-  <h1 class="display-4 fw-bold text-white pt-4">Tour page<br>Rotta protetta da guard e login</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4 text-white pt-5">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 rounded-pill px-4">Primary button</button>
 
-    </div>
-  </div>
-  <div class="overflow-hidden" style="max-height: 30vh;">
-    <div class="container px-5">
-      <img src="https://www.acquariodigenova.it/wp/wp-content/uploads/2022/11/Fascia-img-mondo-1600x6850.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+<div class="banner-image mt-5">
+  <div class="container pb-5">
+    <div class="row py-5 align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 mb-5 pt-5  text-white">Tour virtuale</h1>
+        <p class="h5 aa mb-5  text-white">
+          Immergiti nel fantastico mondo sottomarino comodamente da casa tua con i nostri virtual tour per festeggiare
+          il trentesimo anniversario dell'Acquario di Genova.</p>
+      </div>
     </div>
   </div>
 </div>
 
+
+<div class=" text-center bg-dark hero pb-5 px-5 pt-5">
+  <div class="row row-cols-1 row-cols-md-2 g-4 pb-5">
+    <div class="col">
+      <div class="card">
+        <iframe id="evrFrame" width="100%" height="640" style="width: 100%; height: 640px; border: none; max-width: 100%;"  allowvr="yes" allow="xr-spatial-tracking;vr;gyroscope;accelerometer;fullscreen;" scrolling="no" allowfullscreen="true"  frameborder="0" src="https://webobook.com/public/64079c811b33b177b67de1d2,en?ap=false&si=false&sm=false&sp=false&sfr=false&sl=false&sop=false&" ></iframe>
+        <div class="card-body">
+          <h5 class="card-title text-white fw-bold ">La baia degli squali</h5>
+          <p class="card-text text-white">La baia degli squali, la grande vasca dedicata ai predatori del mare, che ospita, oltre a diverse specie di squalo provenienti da vari ambienti marini, altri pesci interessanti.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/neon-tropical-monstera-leaf-banner_53876-138943.jpg?w=1060&t=st=1680128006~exp=1680128606~hmac=acea8e3999288e980af882488101b38301d1edb5aa7f5ef720e052505c8000e9" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="#" class="btn btn-primary">Virtual tour</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france_181624-33408.jpg?w=1060&t=st=1680128043~exp=1680128643~hmac=0689dce0bc69313c24fc8fedfcc8339a24a17a527d536205b3790c0a9670690c" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Virtual tour</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg?w=1060&t=st=1680128104~exp=1680128704~hmac=1a1d82d6676d0213e9e01dddd9b8651403eb13c6be8adf429761d4eedaaa7a6e" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="#" class="btn btn-primary">Virtual tour</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<app-footer></app-footer>

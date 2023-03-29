@@ -13,13 +13,14 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav flex-grow-1 justify-content-end pe-3">
           <li class="nav-item">
-            <a class="nav-link text-white nome disabled fw-bold" routerLink="profile" *ngIf="isLoggedIn">
+            <a class="nav-link text-white nome disabled fw-bold me-5" routerLink="profile" *ngIf="isLoggedIn">
               Ciao, <span class="text-capitalize">{{ username }}</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link text-white fw-bold" routerLink="login" *ngIf="!isLoggedIn">Login</a>
           </li>
@@ -29,9 +30,12 @@
               Tour virtuale
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-bold" aria-current="page" href="/contatti">Contatti</a>
+          </li>
 
           <li class="nav-item">
-            <a class="nav-link mb-2 btn-tertiary rounded-pill me-2 text-white fw-bold ms-5 logout" (click)="logout()" routerLink="/" *ngIf="isLoggedIn">
+            <a class="nav-link mb-2 btn-tertiary rounded-pill me-2 text-white fw-bold  logout" (click)="logout()" routerLink="/" *ngIf="isLoggedIn">
               Logout
             </a>
           </li>

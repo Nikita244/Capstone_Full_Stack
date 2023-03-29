@@ -1,0 +1,35 @@
+footer{
+  background-color:#00050B ;
+
+}
+
+.line{
+  margin: 0 auto; /* centra la riga orizzontalmente */
+  color: orangered;
+  border: 1px solid;
+  opacity: 1;
+  width: 75%;
+  display: block; /* assicura che la riga abbia sempre la larghezza impostata */
+}
+
+
+
+a{
+  text-decoration: none;
+}
+
+hr{
+  color:transparent;
+}
+
+i{
+  color: orangered;
+}
+
+img{
+  margin-bottom: 20px;
+  max-width: 100%;
+  width: 110px;
+  cursor: default;
+
+}
