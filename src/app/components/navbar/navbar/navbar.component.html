@@ -22,17 +22,21 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white fw-bold" routerLink="login" *ngIf="!isLoggedIn">Login</a>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link btn-tertiary rounded-pill  text-white fw-bold" routerLink="/tour" *ngIf="isLoggedIn">
               Tour virtuale
             </a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link active fw-bold" aria-current="page" href="/contatti">Contatti</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold" routerLink="login" *ngIf="!isLoggedIn">Login</a>
+          </li>
+
+
+
 
           <li class="nav-item">
             <a class="nav-link mb-2 btn-tertiary rounded-pill me-2 text-white fw-bold  logout" (click)="logout()" routerLink="/" *ngIf="isLoggedIn">
