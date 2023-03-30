@@ -162,6 +162,21 @@ input:focus, input:valid { appearance:none!important; }
   border-radius: 50px;
 }
 
+.alert-success{
+  border: none!important;
+  background-color: transparent!important;
+  color: white!important;
+  font-size: 18px;
+}
+
+.login{
+  color: orangered!important;
+}
+
+.login:hover{
+  text-decoration: underline orangered;
+}
+
 @media screen and (max-width: 575px) {
   #nomecognomne {
     flex-direction: column;

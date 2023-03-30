@@ -26,10 +26,20 @@ i{
   color: orangered;
 }
 
+i:hover{
+  color: #c93600;
+  opacity: 1;
+}
+
 img{
   margin-bottom: 20px;
   max-width: 100%;
   width: 110px;
   cursor: default;
 
+}
+
+a{
+  color: white;
+  text-decoration: none;
 }

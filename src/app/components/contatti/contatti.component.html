@@ -1,15 +1,65 @@
 <app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
 
 <div class=" text-center bg-dark hero pb-5">
-  <h1 class="display-4 fw-bold text-white pt-4">Contatti page</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4 text-white pt-5">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3 rounded-pill px-4">Primary button</button>
+  <h1 class="display-4 mb-5 py-3 text-white">Contatti</h1>
 
-    </div>
+  <div id="contact" class="container contact-area section-padding ">
+    <div class="container pt-1 pb-5">
+      <div class="section-title text-center">
+
+      </div>
+      <div class="row">
+
+        <div class="col-md-5 text-white">
+          <div class="single_address">
+            <i class="fa fa-map-marker"></i>
+            <h4>Indirizzo</h4>
+            <p>Area Porto Antico - Ponte Spinola <br> 16128 - Genova</p>
+          </div>
+          <div class="single_address">
+            <i class="fa fa-envelope"></i>
+            <h4>Scrivici</h4>
+            <a href="mailto:tua@email.com">test@test.it</a>
+          </div>
+          <div class="single_address">
+            <i class="fa fa-phone"></i>
+            <h4>Telefono</h4>
+            <a href="tel:+3901023451">010/23451</a>
+          </div>
+          <div class="single_address">
+            <i class="fa fa-clock-o"></i>
+            <h4>Orario</h4>
+            <p>Lunedi - Domenica <br> 09.00 - 18.00</p>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-md-7 text-start text-white">
+          <div class="contact">
+            <form action="#" class="contact-form">
+
+              <div>
+                <label for="exampleFormControlInput1" class="form-label fw-bold">Nome</label>
+                <input type="text" class="form-control rounded border-white mb-3 form-input" id="name"
+                  placeholder="Nome" required>
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label fw-bold">Indirizzo email</label>
+                <input type="email" class="form-control rounded border-white mb-3 form-input" placeholder="Email"
+                  required>
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label fw-bold">Messaggio</label>
+                <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5" cols="30"
+                  placeholder="Scrivi il tuo messaggio" required></textarea>
+              </div>
+              <button class="btn btn-primary btn-block mt-3 rounded-pill px-5 fw-bold mx-auto" routerLink="/tour">
+               Invia
+              </button>
+            </form>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
   </div>
-
 </div>
 
 

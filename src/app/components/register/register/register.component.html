@@ -1,82 +1,49 @@
 <div class="col-md-12 register ">
   <div class="card card-container">
     <h2 class="text-center text-white display-6 pb-4">Registrati</h2>
-    <form
-      *ngIf="!isSuccessful"
-      name="form"
-      (ngSubmit)="f.form.valid && onSubmit()"
-      #f="ngForm"
-      novalidate
-    >
+    <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
-<div class="d-flex justify-content-between" id="nomecognomne">
-    <div class="form-group">
-      <label for="nome">Nome</label>
-      <input
-        type="text"
-        class="form-control"
-        autocomplete="off"
-        name="nome"
-        [(ngModel)]="form.nome"
-        required
-        minlength="3"
-        maxlength="20"
-        #nome="ngModel"
-        [ngClass]="{ 'is-invalid': f.submitted && nome.errors }"
-      />
-      <div class="invalid-feedback" *ngIf="nome.errors && f.submitted">
-        <div *ngIf="nome.errors['required']">Nome obbligatorio</div>
-        <div *ngIf="nome.errors['minlength']">
-          Il nome deve contenere almeno 3 caratteri
+
+      <div class="d-flex justify-content-between" id="nomecognomne">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" autocomplete="off" name="nome" [(ngModel)]="form.nome" required
+            minlength="3" maxlength="20" #nome="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nome.errors }" />
+          <div class="invalid-feedback" *ngIf="nome.errors && f.submitted">
+            <div *ngIf="nome.errors['required']">Nome obbligatorio</div>
+            <div *ngIf="nome.errors['minlength']">
+              Il nome deve contenere almeno 3 caratteri
+            </div>
+            <div *ngIf="nome.errors['maxlength']">
+              Username must be at most 20 characters
+            </div>
+          </div>
         </div>
-        <div *ngIf="nome.errors['maxlength']">
-          Username must be at most 20 characters
+
+
+        <div class="form-group">
+          <label for="cognome">Cognome</label>
+          <input type="text" class="form-control" autocomplete="off" name="cognome" [(ngModel)]="form.cognome" required
+            minlength="3" maxlength="20" #cognome="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && cognome.errors }" />
+          <div class="invalid-feedback" *ngIf="cognome.errors && f.submitted">
+            <div *ngIf="cognome.errors['required']">Cognome obbligatorio</div>
+            <div *ngIf="cognome.errors['minlength']">
+              Cognome deve contenere almeno 3 caratteri
+            </div>
+            <div *ngIf="cognome.errors['maxlength']">
+              Cognome must be at most 20 characters
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="form-group">
-      <label for="cognome">Cognome</label>
-      <input
-        type="text"
-        class="form-control"
-        autocomplete="off"
-        name="cognome"
-        [(ngModel)]="form.cognome"
-        required
-        minlength="3"
-        maxlength="20"
-        #cognome="ngModel"
-        [ngClass]="{ 'is-invalid': f.submitted && cognome.errors }"
-      />
-      <div class="invalid-feedback" *ngIf="cognome.errors && f.submitted">
-        <div *ngIf="cognome.errors['required']">Cognome obbligatorio</div>
-        <div *ngIf="cognome.errors['minlength']">
-          Cognome deve contenere almeno 3 caratteri
-        </div>
-        <div *ngIf="cognome.errors['maxlength']">
-          Cognome must be at most 20 characters
-        </div>
-      </div>
-    </div>
-  </div>
 
 
       <div class="form-group">
         <label for="username">Username</label>
-        <input
-          type="text"
-          class="form-control"
-          autocomplete="off"
-          name="username"
-          [(ngModel)]="form.username"
-          required
-          minlength="3"
-          maxlength="20"
-          #username="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
-        />
+        <input type="text" class="form-control" autocomplete="off" name="username" [(ngModel)]="form.username" required
+          minlength="3" maxlength="20" #username="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && username.errors }" />
         <div class="invalid-feedback" *ngIf="username.errors && f.submitted">
           <div *ngIf="username.errors['required']">Username obbligatorio</div>
           <div *ngIf="username.errors['minlength']">
@@ -91,17 +58,8 @@
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          autocomplete="off"
-          name="email"
-          [(ngModel)]="form.email"
-          required
-          email
-          #email="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
-        />
+        <input type="email" class="form-control" autocomplete="off" name="email" [(ngModel)]="form.email" required email
+          #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.errors }" />
         <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
           <div *ngIf="email.errors['required']">Email obbligatoria</div>
           <div *ngIf="email.errors['email']">
@@ -113,17 +71,8 @@
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          autocomplete="off"
-          name="password"
-          [(ngModel)]="form.password"
-          required
-          minlength="6"
-          #password="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
-        />
+        <input type="password" class="form-control" autocomplete="off" name="password" [(ngModel)]="form.password"
+          required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
 
         <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
           <div *ngIf="password.errors['required']">Password obbligatoria</div>
@@ -135,7 +84,8 @@
 
 
       <div class="col-sm-12 mb-2 mt-4 d-flex justify-content-center">
-        <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+        <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required
+          [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
         <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
           <div *ngIf="recaptcha.errors?.['required']">Questo campo è obbligatorio.</div>
         </div>
@@ -145,6 +95,11 @@
         <button class="btn btn-primary btn-block rounded-pill px-4">Registrati</button>
       </div>
 
+      <div class="alert alert-danger mt-3 text-center fw-bold" *ngIf="f.submitted && isSignUpFailed">
+        Registrazione fallita!<br />{{ errorMessage }}
+      </div>
+
+
       <div class="form-group d-flex justify-content-center text-white" id="register">
         <a class="nav-link me-2 pt-4" routerLink="/login">Sei già registrato? Clicca qui</a>
       </div>
@@ -153,13 +108,12 @@
         <a class="nav-link me-2 pt-4 indietro" routerLink="/"><i class="bi bi-arrow-left-circle"></i> Indietro</a>
       </div>
 
-      <div class="alert alert-danger mt-3" *ngIf="f.submitted && isSignUpFailed">
-       Registrazione fallita!<br />{{ errorMessage }}
-      </div>
+
     </form>
 
-    <div class="alert alert-success " *ngIf="isSuccessful">
+    <div class="alert alert-success text-center fw-bold" *ngIf="isSuccessful">
       Registrazione avvenuta con successo!
+      <a class="nav-link me-2 pt-4 login fw-bold" routerLink="/login">Clicca qui per accedere</a>
     </div>
   </div>
 </div>
