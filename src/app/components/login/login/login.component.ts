@@ -37,7 +37,12 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
-        this.router.navigate(['/']);
+
+        if (this.roles.includes('ROLE_ADMIN')) {
+          this.router.navigate(['/edit_cards']);
+        } else {
+          this.router.navigate(['/']);
+        }
       },
       error: err => {
         if (err && err.error && err.error.message) {

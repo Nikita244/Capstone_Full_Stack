@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/register/register/register.component';
 import { TourComponent } from './components/tour/tour.component';
 import { AuthguardGuard } from './guard/authguard.guard';
+import { EditCardsComponent } from './components/edit-cards/edit-cards.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'contatti', component: ContattiComponent},
   {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
-  {path: 'detail/:id',component: CardDetailsComponent}
+  {path: 'detail/:id',component: CardDetailsComponent},
+  {path: 'edit_cards',component: EditCardsComponent,canActivate:[AuthguardGuard]}
+
 
    /* {
       path: 'tour',

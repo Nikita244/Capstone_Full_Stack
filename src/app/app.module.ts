@@ -19,6 +19,7 @@ import { TourComponent } from './components/tour/tour.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
+import { EditCardsComponent } from './components/edit-cards/edit-cards.component';
 
 
 
@@ -37,7 +38,8 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
     TourComponent,
     FooterComponent,
     ContattiComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    EditCardsComponent
 
 
   ],
