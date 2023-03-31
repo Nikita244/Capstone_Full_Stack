@@ -21,6 +21,10 @@
             <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
           </li>
 
+          <li class="nav-item" *ngIf="showAdminBoard">
+  <a class="nav-link active fw-bold" aria-current="page" routerLink="/edit_cards">Modifica</a>
+</li>
+
           <li class="nav-item">
             <a class="nav-link btn-tertiary rounded-pill  text-white fw-bold" routerLink="/tour" *ngIf="isLoggedIn">
               Tour virtuale
