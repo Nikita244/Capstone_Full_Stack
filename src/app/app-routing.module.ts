@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CardDetailsComponent } from './components/card-details/card-details.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { LoginComponent } from './components/login/login/login.component';
@@ -12,8 +13,25 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'contatti', component: ContattiComponent},
-  {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] }
+  {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
+  {path: 'detail/:id',component: CardDetailsComponent}
+
+   /* {
+      path: 'tour',
+      component: TourComponent,
+      canActivate: [AuthguardGuard],
+      children: [
+        {
+          path: 'detail/:id',
+          component: CardDetailsComponent,
+          canActivate: [AuthguardGuard]
+        }
+      ]
+    }*/
+
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: "enabled" })],

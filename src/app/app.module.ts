@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import { TourComponent } from './components/tour/tour.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
+import { CardDetailsComponent } from './components/card-details/card-details.component';
 
 
 
@@ -35,7 +36,8 @@ import { ContattiComponent } from './components/contatti/contatti.component';
     HomeComponent,
     TourComponent,
     FooterComponent,
-    ContattiComponent
+    ContattiComponent,
+    CardDetailsComponent
 
 
   ],
