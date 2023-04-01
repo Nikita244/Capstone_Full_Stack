@@ -1,7 +1,116 @@
 <app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
 
+<div class="container-fluid body py-5">
 
-<div class="container my-5">
-  <p class="text-white pt-5">edit-cards works!</p>
+  <div class="form-box mb-5">
+    <h1 class="display-6 pb-5">Aggiungi Card</h1>
+
+    <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+
+
+      <div class="form-group">
+        <label for="immagine">URL Immagine</label>
+        <input type="text" class="form-control" autocomplete="off" name="immagine" [(ngModel)]="form.immagine" required
+          minlength="3" maxlength="500" #immagine="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && immagine.errors }" />
+        <div class="invalid-feedback" *ngIf="immagine.errors && f.submitted">
+          <div *ngIf="immagine.errors['required']">Immagine obbligatoria</div>
+          <div *ngIf="immagine.errors['minlength']">
+            La URL deve contenere l'indirizzo completo
+          </div>
+          <div *ngIf="immagine.errors['maxlength']">
+            La URL può contenere al massimo 500 caratteri
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="nomecomune">Nome comune</label>
+        <input type="text" class="form-control" autocomplete="off" name="nome_comune" [(ngModel)]="form.nome_comune"
+          required minlength="3" maxlength="80" #nome_comune="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && nome_comune.errors }" />
+        <div class="invalid-feedback" *ngIf="nome_comune.errors && f.submitted">
+          <div *ngIf="nome_comune.errors['required']">Nome comune obbligatorio</div>
+          <div *ngIf="nome_comune.errors['minlength']">
+            Nome comune deve contenere almeno 3 caratteri
+          </div>
+          <div *ngIf="nome_comune.errors['maxlength']">
+            Nome comune può contenere al massimo 80 caratteri
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label for="username">Nome scientifico</label>
+        <input type="text" class="form-control" autocomplete="off" name="nome_scientifico"
+          [(ngModel)]="form.nome_scientifico" required minlength="3" maxlength="80" #nome_scientifico="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && nome_scientifico.errors }" />
+        <div class="invalid-feedback" *ngIf="nome_scientifico.errors && f.submitted">
+          <div *ngIf="nome_scientifico.errors['required']">Nome scientifico obbligatorio</div>
+          <div *ngIf="nome_scientifico.errors['minlength']">
+            Nome scientifico deve contenere almeno 3 caratteri
+          </div>
+          <div *ngIf="nome_scientifico.errors['maxlength']">
+            Nome scientifico può contenere al massimo 80 caratteri
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Habitat</label>
+        <input type="text" class="form-control" autocomplete="off" name="habitat" [(ngModel)]="form.habitat" required
+          minlength="3" maxlength="80" #habitat="ngModel" [ngClass]="{ 'is-invalid': f.submitted && habitat.errors }" />
+        <div class="invalid-feedback" *ngIf="habitat.errors && f.submitted">
+          <div *ngIf="habitat.errors['required']">Habitat obbligatorio</div>
+          <div *ngIf="habitat.errors['minlength']">
+            Habitat deve contenere almeno 3 caratteri
+          </div>
+          <div *ngIf="habitat.errors['maxlength']">
+            Habitat può contenere al massimo 80 caratteri
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="username">Descrizione</label>
+        <textarea type="text-area" class="form-control" autocomplete="off" name="descrizione"
+          [(ngModel)]="form.descrizione" required minlength="20" maxlength="1500" #descrizione="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && descrizione.errors }"></textarea>
+        <div class="invalid-feedback" *ngIf="descrizione.errors && f.submitted">
+          <div *ngIf="descrizione.errors['required']">Descrizione obbligatoria</div>
+          <div *ngIf="descrizione.errors['minlength']">
+            Descrizione deve contenere almeno 20 caratteri
+          </div>
+          <div *ngIf="descrizione.errors['maxlength']">
+            Descrizione può contenere al massimo 1500 caratteri
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="form-group d-flex justify-content-center mt-4 ">
+        <button class="btn btn-primary btn-block rounded-pill px-4text-black px-4">Aggiungi</button>
+      </div>
+    </form>
+
+    <div class="alert alert-success text-center fw-bold" *ngIf="isSuccessful">
+      Creazione avvenuta con successo!
+      <br>
+      <a class="btn btn-primary mt-5  rounded-pill px-4" routerLink="/">Indietro</a>
+    </div>
+
+    <div class="alert alert-danger mt-3 text-center fw-bold" *ngIf="isFailed">
+      Creazione fallita!<br />{{ errorMessage }}
+    </div>
+
+  </div>
+
 </div>
+
 <app-footer></app-footer>

@@ -26,8 +26,8 @@ h1 {
 
 iframe{
   max-height: 300px!important;
-  border-top-left-radius:15px;
-  border-top-right-radius: 15px;
+ // border-top-left-radius:15px;
+  //border-top-right-radius: 15px;
   border: none!important;
 
 }
@@ -35,9 +35,7 @@ iframe{
 .card {
   border: none!important;
   background-color: transparent;
-
 }
-
 
 
 h5{
@@ -56,3 +54,17 @@ h5{
   //border-bottom-left-radius: 20px;
   //border-bottom-right-radius: 20px;
 }
+
+.btn{
+  background-color: orangered;
+  border: 1px solid orangered;
+  font-weight: 600;
+  opacity: 1;
+  }
+
+  .btn:hover{
+    background-color: rgb(192, 51, 0);
+    border-color: rgb(192, 51, 0);
+  }
+
+

@@ -5,12 +5,12 @@
 
 
   .container-fluid{
-    background-image: url("https://img.freepik.com/free-photo/rocks-with-sea-moss_1160-752.jpg?w=900&t=st=1678285003~exp=1678285603~hmac=56501f9df2c890664c9a9d60c70593e4e190a36751f69d8a541134ad0550a5ca");
+    background-image: url("../../../assets/img/abisso.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+
   }
 
 .container-fluid::before {
@@ -26,10 +26,17 @@
 
   .card{
     border: none!important;
+    border-radius: 0;
   }
 
   .card {
-    box-shadow: 0px 4px 10px rgba(70, 97, 177, 0.804)!important;
+    //box-shadow: 0px 4px 10px rgba(70, 97, 177, 0.804)!important;
+  }
+
+  .card-body{
+    background: linear-gradient(#01052e, #00050B);
+    color: white;
+    text-align: justify;
   }
 
   .card img{
@@ -42,20 +49,23 @@
     object-position: center;
   }
 
-  .card-body {
-    position: relative;
-    bottom: 40px;
-    overflow: hidden;
-  }
+
   .bi {
     display: inline-block;
     vertical-align: -0.220em;
     fill: currentcolor;
 }
 
-.btn {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 20px;
+.btn{
+background-color: orangered;
+border: 1px solid orangered;
+font-weight: 600;
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+
+.btn:hover{
+  background-color: rgb(212, 57, 0);
+  border-color: rgb(212, 57, 0 );
 }

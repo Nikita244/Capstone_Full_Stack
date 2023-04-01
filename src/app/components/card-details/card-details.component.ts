@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
-interface Post {
-  albumId: number;
+interface Card {
   id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
+  immagine: string;
+  nome_comune:string
+  nome_scientifico:string
+  habitat: string;
+  descrizione: string;
 }
 
 
@@ -17,8 +18,12 @@ interface Post {
   styleUrls: ['./card-details.component.scss']
 })
 export class CardDetailsComponent implements OnInit {
-  thumbnailUrl = '';
-  title = '';
+
+  immagine = '';
+  nome_comune = '';
+  nome_scientifico = '';
+  habitat = '';
+  descrizione = '';
 
 
 
@@ -31,10 +36,14 @@ export class CardDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const id = params['id'];
-      const url = `https://jsonplaceholder.typicode.com/photos/${id}`;
-      this.http.get<Post>(url).subscribe((response) => {
-        this.thumbnailUrl = response.thumbnailUrl;
-        this.title = response.title;
+      const url = `http://localhost:8080/api/card/${id}`;
+      this.http.get<Card>(url).subscribe((response) => {
+        this.immagine = response.immagine;
+        this.nome_comune = response.nome_comune;
+        this.nome_scientifico = response.nome_scientifico;
+        this.habitat = response.habitat;
+        this.descrizione = response.descrizione;
+        console.log(response);
       });
     });
   }

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         this.roles = this.storageService.getUser().roles;
 
         if (this.roles.includes('ROLE_ADMIN')) {
-          this.router.navigate(['/edit_cards']);
+          this.router.navigate(['/']);
         } else {
           this.router.navigate(['/']);
         }
