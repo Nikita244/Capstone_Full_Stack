@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
 import { EditCardsComponent } from './components/edit-cards/edit-cards.component';
+import { AllCardsComponent } from './components/all-cards/all-cards.component';
 
 
 
@@ -39,7 +40,8 @@ import { EditCardsComponent } from './components/edit-cards/edit-cards.component
     FooterComponent,
     ContattiComponent,
     CardDetailsComponent,
-    EditCardsComponent
+    EditCardsComponent,
+    AllCardsComponent
 
 
   ],

@@ -95,14 +95,18 @@
 
 
       <div class="form-group d-flex justify-content-center mt-4 ">
-        <button class="btn btn-primary btn-block rounded-pill px-4text-black px-4">Aggiungi</button>
+        <button class="btn btn-primary btn-block rounded-pill px-4">Aggiungi</button>
       </div>
+      <div class="form-group d-flex justify-content-center mt-4 ">
+        <a class="btn btn-primary rounded-pill px-4 indietro" routerLink="/all_cards">Indietro</a>
+      </div>
+
     </form>
 
     <div class="alert alert-success text-center fw-bold" *ngIf="isSuccessful">
       Creazione avvenuta con successo!
       <br>
-      <a class="btn btn-primary mt-5  rounded-pill px-4" routerLink="/">Indietro</a>
+      <a class="btn btn-primary mt-5  rounded-pill px-4" routerLink="/all_cards">Indietro</a>
     </div>
 
     <div class="alert alert-danger mt-3 text-center fw-bold" *ngIf="isFailed">

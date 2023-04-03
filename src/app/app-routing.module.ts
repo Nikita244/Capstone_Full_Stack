@@ -8,6 +8,8 @@ import { RegisterComponent } from './components/register/register/register.compo
 import { TourComponent } from './components/tour/tour.component';
 import { AuthguardGuard } from './guard/authguard.guard';
 import { EditCardsComponent } from './components/edit-cards/edit-cards.component';
+import { AllCardsComponent } from './components/all-cards/all-cards.component';
+import { AdminGuard } from './guard/admin.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,21 +18,8 @@ const routes: Routes = [
   {path: 'contatti', component: ContattiComponent},
   {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
   {path: 'detail/:id',component: CardDetailsComponent},
-  {path: 'edit_cards',component: EditCardsComponent,canActivate:[AuthguardGuard]}
-
-
-   /* {
-      path: 'tour',
-      component: TourComponent,
-      canActivate: [AuthguardGuard],
-      children: [
-        {
-          path: 'detail/:id',
-          component: CardDetailsComponent,
-          canActivate: [AuthguardGuard]
-        }
-      ]
-    }*/
+  {path: 'edit_cards',component: EditCardsComponent,canActivate:[AuthguardGuard]},
+  {path: 'all_cards',component: AllCardsComponent,canActivate:[AuthguardGuard]}
 
 ];
 

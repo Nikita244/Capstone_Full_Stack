@@ -1,0 +1,58 @@
+<app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
+
+<div class="container-fluid">
+  <div class="container title">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-5">
+          <h2 class="fw-bold">Gestione Cards</h2>
+        </div>
+        <div class="col-7">
+          <a class="btn btn-secondary rounded-pill fw-bolder" routerLink="/edit_cards"><i class="bi bi-plus-circle-fill"
+              id="plus"></i> <span class="pt-1">Aggiungi Card</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive bg-light">
+      <table class="table">
+        <div class="wrapper table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Action</th>
+            <th scope="col">Immagine</th>
+            <th scope="col" class="nome1">Nome comune</th>
+            <th scope="col" class="nome2">Nome scientifico</th>
+            <th scope="col" class="habitat">Habitat</th>
+            <th scope="col" class="desc">Descrizione</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let card of cards">
+            <td>
+              <a class="delete " title="Delete" data-toggle="tooltip" (click)="elimina(card.id)" ><i class="bi bi-trash-fill"></i></a>
+            </td>
+            <td><img [src]="card.immagine" class="avatar" alt="Avatar"></td>
+            <td>{{card.nome_comune}}</td>
+            <td>{{card.nome_scientifico}}</td>
+            <td>{{card.habitat}}</td>
+            <td>
+              <div class="text pe-1"> {{card.descrizione}}</div>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </div>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+<app-footer></app-footer>
