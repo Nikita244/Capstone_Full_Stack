@@ -18,8 +18,8 @@ const routes: Routes = [
   {path: 'contatti', component: ContattiComponent},
   {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
   {path: 'detail/:id',component: CardDetailsComponent},
-  {path: 'edit_cards',component: EditCardsComponent,canActivate:[AuthguardGuard]},
-  {path: 'all_cards',component: AllCardsComponent,canActivate:[AuthguardGuard]}
+  {path: 'add_card',component: EditCardsComponent,canActivate:[AuthguardGuard,AdminGuard]},
+  {path: 'all_cards',component: AllCardsComponent,canActivate:[AuthguardGuard, AdminGuard]}
 
 ];
 

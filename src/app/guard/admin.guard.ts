@@ -19,19 +19,20 @@ export class AdminGuard implements CanActivate {
   constructor(private storageService: StorageService,
     private authService: AuthService, private eventBusService: EventBusService,private router:Router) { }
 
-
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
-      this.isLoggedIn = this.storageService.isLoggedIn();
-      if (this.isLoggedIn) {
+    canActivate(
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
+    ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      const isLoggedIn = this.storageService.isLoggedIn();
+      if (isLoggedIn) {
         const user = this.storageService.getUser();
-        this.roles = user.roles;
-        this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-        this.username = user.username;
+        const roles = user.roles;
+        const showAdminBoard = roles.includes('ROLE_ADMIN');
+        if (showAdminBoard) {
+          this.username = user.username;
+          return true; // l'utente è autenticato e autorizzato come amministratore
+        }
+      }
+      return this.router.createUrlTree(['/']);
     }
-    this.router.navigate(['/']);
-   return false;
-  }
 }

@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 import { EditCardsService } from '../edit-cards.service';
 
 @Component({
@@ -42,6 +41,7 @@ export class EditCardsComponent {
         console.log(data);
         this.isSuccessful = true;
         this.isFailed = false;
+        window.scrollTo(0, 0); // scrolla in cima alla pagina
       },
       error: err => {
         this.errorMessage = err.error.message;

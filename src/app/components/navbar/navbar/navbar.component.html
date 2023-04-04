@@ -18,24 +18,26 @@
             </a>
           </li>
 
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link fw-bold" aria-current="page" routerLink="/">Home</a>
+        </li>
+
+
+
+
           <li class="nav-item" *ngIf="showAdminBoard">
-            <a class="nav-link active fw-bold" aria-current="page" routerLink="/all_cards">Gestisci</a>
+            <a class="nav-link  fw-bold" aria-current="page" routerLink="/all_cards" routerLinkActive="active">Gestione</a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link btn-tertiary rounded-pill  text-white fw-bold" routerLink="/tour" *ngIf="isLoggedIn">
+            <a class="nav-link  btn-tertiary rounded-pill text-white fw-bold" aria-current="page" routerLink="/tour" routerLinkActive="active" *ngIf="isLoggedIn">
               Tour virtuale
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active fw-bold" aria-current="page" href="/contatti">Contatti</a>
+            <a class="nav-link fw-bold" aria-current="page" routerLink="/contatti" routerLinkActive="active">Contatti</a>
           </li>
 
           <li class="nav-item">

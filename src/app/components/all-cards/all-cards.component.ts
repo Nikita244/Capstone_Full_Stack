@@ -35,8 +35,36 @@ export class AllCardsComponent implements OnInit{
     });
   }
 
-  elimina(id:number){
+
+ /* elimina(id:number){
     console.log(id);
+  }*/
+
+  elimina(id: number) {
+
+    const cardToDelete = this.cards.find(card => card.id === id);
+    if (!cardToDelete) {
+      return;
+    }
+
+    const nomeComuneInMaiuscolo = cardToDelete.nome_comune.toUpperCase();
+
+    if (window.confirm(`Hai scelto di eliminare definitivamente la Card "${nomeComuneInMaiuscolo}".\nL'operazione è irreversibile. Sei sicuro di voler procedere?`)) {
+      const url = `http://localhost:8080/api/delete_card/${id}`;
+      this.http.delete(url).subscribe(
+        () => {
+          // Rimuovi la carta dall'elenco
+          this.cards = this.cards.filter((card) => card.id !== id);
+          console.log(`Card con ID ${id} rimossa con successo.`);
+
+         // Mostra un messaggio di conferma
+        window.alert(`La Card "${nomeComuneInMaiuscolo}" è stata eliminata con successo.`);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    }
   }
 
 }
