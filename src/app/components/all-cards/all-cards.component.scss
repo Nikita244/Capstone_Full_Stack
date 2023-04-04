@@ -86,7 +86,6 @@ table.table tr th, table.table tr td {
 }
 
 .bi{
-  color: red;
   cursor: pointer;
   font-size: 22px;
 }
@@ -103,6 +102,13 @@ td .text {
 .desc{
   width: 380px!important;
 }
+
+.icons{
+  padding-left: 5px!important;
+  padding-right: 5px!important;
+}
+
+
 
 ::-webkit-scrollbar {
   width: 5px;

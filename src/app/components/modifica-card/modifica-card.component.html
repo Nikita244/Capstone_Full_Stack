@@ -1,0 +1,61 @@
+<app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
+
+<div class="container-fluid body py-5">
+
+  <div class="form-box mb-5">
+    <h1 class="display-6 pb-5">Modifica Card</h1>
+
+    <form *ngIf="!isSuccessful" name="form">
+
+      <div class="form-group">
+        <label for="immagine">URL Immagine</label>
+        <input type="text" class="form-control" autocomplete="off" name="immagine" [(ngModel)]="immagine" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="immagine">Nome comune</label>
+        <input type="text" class="form-control" autocomplete="off" name="nome_comune" [(ngModel)]="nome_comune" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="immagine">Nome scientifico</label>
+        <input type="text" class="form-control" autocomplete="off" name="nome_scientifico" [(ngModel)]="nome_scientifico" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="immagine">Habitat</label>
+        <input type="text" class="form-control" autocomplete="off" name="habitat" [(ngModel)]="habitat" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="immagine">Descrizione</label>
+        <textarea type="text" class="form-control" autocomplete="off" name="descrizione" [(ngModel)]="descrizione" required></textarea>
+      </div>
+
+
+      <div class="form-group d-flex justify-content-center mt-4 ">
+        <button class="btn btn-primary btn-block rounded-pill px-4" (click)="onSubmit()">Modifica</button>
+      </div>
+      <div class="form-group d-flex justify-content-center mt-4 ">
+        <a class="btn btn-primary rounded-pill px-4 indietro" routerLink="/all_cards">Indietro</a>
+      </div>
+
+    </form>
+
+    <div class="alert alert-success text-center fw-bold" *ngIf="isSuccessful">
+      Creazione avvenuta con successo!
+      <br>
+      <a class="btn btn-primary mt-5  rounded-pill px-4" routerLink="/all_cards">Indietro</a>
+    </div>
+
+    <div class="alert alert-danger mt-3 text-center fw-bold" *ngIf="isFailed">
+      Creazione fallita!<br />{{ errorMessage }}
+    </div>
+
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>
+

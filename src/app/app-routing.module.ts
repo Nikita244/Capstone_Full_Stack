@@ -7,9 +7,10 @@ import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/register/register/register.component';
 import { TourComponent } from './components/tour/tour.component';
 import { AuthguardGuard } from './guard/authguard.guard';
-import { EditCardsComponent } from './components/edit-cards/edit-cards.component';
+import { AddCardComponent } from './components/add-card/add-card.component';
 import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { AdminGuard } from './guard/admin.guard';
+import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,9 +19,9 @@ const routes: Routes = [
   {path: 'contatti', component: ContattiComponent},
   {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
   {path: 'detail/:id',component: CardDetailsComponent},
-  {path: 'add_card',component: EditCardsComponent,canActivate:[AuthguardGuard,AdminGuard]},
-  {path: 'all_cards',component: AllCardsComponent,canActivate:[AuthguardGuard, AdminGuard]}
-
+  {path: 'add_card',component: AddCardComponent ,canActivate:[AuthguardGuard,AdminGuard]},
+  {path: 'all_cards',component: AllCardsComponent,canActivate:[AuthguardGuard, AdminGuard]},
+ {path: 'modify_card/:id',component: ModificaCardComponent,canActivate:[AuthguardGuard, AdminGuard]}
 ];
 
 

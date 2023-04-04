@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 interface Card {
@@ -25,6 +25,7 @@ export class AllCardsComponent implements OnInit{
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -66,6 +67,10 @@ export class AllCardsComponent implements OnInit{
       );
     }
   }
+
+  modifica(id:number):void{
+    this.router.navigate(['modify_card/'+id])
+  };
 
 }
 

@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { EditCardsService } from '../edit-cards.service';
 
 @Component({
-  selector: 'app-edit-cards',
-  templateUrl: './edit-cards.component.html',
-  styleUrls: ['./edit-cards.component.scss']
+  selector: 'app-add-card',
+  templateUrl: './add-card.component.html',
+  styleUrls: ['./add-card.component.scss']
 })
-export class EditCardsComponent {
+export class AddCardComponent {
 
   @Input() isLoggedIn!: boolean;
 
