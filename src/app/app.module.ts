@@ -23,6 +23,7 @@ import { AddCardComponent} from './components/add-card/add-card.component';
 import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
 
 
 
@@ -43,7 +44,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CardDetailsComponent,
     AddCardComponent,
     AllCardsComponent,
-    ModificaCardComponent
+    ModificaCardComponent,
+    CookiePolicyComponent
 
 
   ],

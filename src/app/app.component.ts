@@ -35,7 +35,7 @@ export class AppComponent {
       let cc = window as any;
       cc.cookieconsent.initialise({
         "cookie": {
-          "domain": "http://localhost:4200/home"
+          "domain": "http://localhost:4200"
         },
         "position": "bottom",
         "theme": "classic",
@@ -57,7 +57,7 @@ export class AppComponent {
           "dismiss": "Ho capito",
           "deny": "Refuse cookies",
           "link": "Scopri di più",
-          "href": "https://cookiesandyou.com/",
+          "href": "http://localhost:4200/cookie_policy",
           "policy": "Cookie Policy"
         },
         onStatusChange: function (status: string) {

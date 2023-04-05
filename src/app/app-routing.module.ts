@@ -11,12 +11,14 @@ import { AddCardComponent } from './components/add-card/add-card.component';
 import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { AdminGuard } from './guard/admin.guard';
 import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
+import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'contatti', component: ContattiComponent},
+  {path: 'cookie_policy', component: CookiePolicyComponent},
   {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
   {path: 'detail/:id',component: CardDetailsComponent},
   {path: 'add_card',component: AddCardComponent ,canActivate:[AuthguardGuard,AdminGuard]},

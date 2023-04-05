@@ -1,0 +1,30 @@
+.banner-image {
+  background-image: url(../../../assets/img/background-01_UN.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  padding-top: 100px;
+  margin-top: -80px !important;
+}
+
+.text{
+  background-color: #00050B;
+}
+
+p,li{
+  line-height: 30px;
+  text-align: justify;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+img{
+
+  max-width: 100%;
+  width: 130px;
+  cursor: default;
+  padding-left: 15px;
+
+}
