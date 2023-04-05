@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { PaginationService } from '../_services/pagination.service';
 
 interface Card {
   id: number;
@@ -20,22 +21,32 @@ export class AllCardsComponent implements OnInit{
 
   @Input() isLoggedIn!: boolean;
 
+  p: number = 1;
+
   cards: Card[] = [];
 
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private pagination: PaginationService
   ) { }
 
   ngOnInit(): void {
-    const url = `http://localhost:8080/api/cards_page`;
+   /* const url = `http://localhost:8080/api/cards_page`;
     this.http.get<Card[]>(url).subscribe((response) => {
       this.cards = response;
       console.log(response);
-    });
+    });*/
+    this.getGardsPage();
   }
 
+  getGardsPage():void{
+    this.pagination.getCardsPaginated().subscribe(cards =>{
+      this.cards = cards;
+    })
+
+  }
 
  /* elimina(id:number){
     console.log(id);

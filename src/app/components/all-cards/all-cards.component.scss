@@ -108,7 +108,19 @@ td .text {
   padding-right: 5px!important;
 }
 
+.pagination{
+  color: rgb(131, 131, 131);
+  background-color: #FDFDFD;
+}
 
+.pagination ::ng-deep .ngx-pagination .current{
+  background-color: orangered;
+  border-radius: 3px;
+}
+
+.pagination ::ng-deep .ngx-pagination a:hover{
+  border-radius: 3px;
+}
 
 ::-webkit-scrollbar {
   width: 5px;

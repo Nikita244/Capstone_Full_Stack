@@ -24,55 +24,55 @@ export class AppComponent {
     private storageService: StorageService,
     private authService: AuthService,
     private eventBusService: EventBusService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
 
     let consentStatus = localStorage.getItem('cookie-consent');
 
-if (consentStatus === null) {
-  // Se il valore non è stato ancora impostato, salva la scelta dell'utente
-  let cc = window as any;
-  cc.cookieconsent.initialise({
-    "cookie": {
-      "domain": "http://localhost:4200/home"
-    },
-    "position": "bottom",
-    "theme": "classic",
-    "palette": {
-      "popup": {
-        "background": "#00050B",
-        "text": "#ffffff",
-        "link": "#7b7b7b"
-      },
-      "button": {
-        "background": "#ff4500",
-        "text": "#ffffff",
-        "border": "transparent"
-      }
-    },
-    "type": "info",
-    "content": {
-      "message": "Questo sito Web utilizza i cookie per assicurarti la migliore esperienza sul nostro sito Web.",
-      "dismiss": "Ho capito",
-      "deny": "Refuse cookies",
-      "link": "Scopri di più",
-      "href": "https://cookiesandyou.com/",
-      "policy": "Cookie Policy"
-    },
-    onStatusChange: function(status: string) {
-      localStorage.setItem('cookie-consent', status);
-      consentStatus = status;
-    }
-  });
+    if (consentStatus === null) {
+      // Se il valore non è stato ancora impostato, salva la scelta dell'utente
+      let cc = window as any;
+      cc.cookieconsent.initialise({
+        "cookie": {
+          "domain": "http://localhost:4200/home"
+        },
+        "position": "bottom",
+        "theme": "classic",
+        "palette": {
+          "popup": {
+            "background": "#00050B",
+            "text": "#ffffff",
+            "link": "#7b7b7b"
+          },
+          "button": {
+            "background": "#ff4500",
+            "text": "#ffffff",
+            "border": "transparent"
+          }
+        },
+        "type": "info",
+        "content": {
+          "message": "Questo sito Web utilizza i cookie per assicurarti la migliore esperienza sul nostro sito Web.",
+          "dismiss": "Ho capito",
+          "deny": "Refuse cookies",
+          "link": "Scopri di più",
+          "href": "https://cookiesandyou.com/",
+          "policy": "Cookie Policy"
+        },
+        onStatusChange: function (status: string) {
+          localStorage.setItem('cookie-consent', status);
+          consentStatus = status;
+        }
+      });
 
-  // Aggiungi la regola CSS per rimuovere l'underline del link "Ho capito"
-  let style = document.createElement('style');
-  style.innerHTML = '.cc-window .cc-dismiss a { text-decoration: none; }';
-  document.head.appendChild(style);
-} else {
-  // Se il valore è stato già impostato, non fare nulla
-}
+      // Aggiungi la regola CSS per rimuovere l'underline del link "Ho capito"
+      let style = document.createElement('style');
+      style.innerHTML = '.cc-window .cc-dismiss a { text-decoration: none; }';
+      document.head.appendChild(style);
+    } else {
+      // Se il valore è stato già impostato, non fare nulla
+    }
 
 
 

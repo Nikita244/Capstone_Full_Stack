@@ -22,7 +22,7 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
 import { AddCardComponent} from './components/add-card/add-card.component';
 import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -53,7 +53,8 @@ import { ModificaCardComponent } from './components/modifica-card/modifica-card.
     FormsModule,
     HttpClientModule,
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    NgxPaginationModule
 
 
   ],
