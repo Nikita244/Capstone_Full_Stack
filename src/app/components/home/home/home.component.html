@@ -9,11 +9,13 @@
           Un eccezionale <span style="color:orangered;font-weight:bold">Tour virtuale interattivo</span> tra le vasche
           più iconiche dell'Acquario di Genova per celebrare il trentesimo anniversario e ammirare la sua grande
           biodiversità! </p>
-        <div class="d-flex">
+        <div class="d-flex"  *ngIf="!isLoggedIn">
           <a href="" class="btn btn-primary text-center text-white me-2 rounded-pill px-4 py-2 fw-bold tuffo"
-            routerLink="/tour" *ngIf="!isLoggedIn">Accedi</a>
+            routerLink="/tour">Accedi</a>
+        </div>
+        <div class="d-flex" *ngIf="isLoggedIn">
             <a href="" class="btn btn-primary text-center text-white me-2 rounded-pill px-4 py-2 fw-bold tuffo"
-            routerLink="/tour" *ngIf="isLoggedIn">Tuffati</a>
+            routerLink="/tour">Tuffati</a>
         </div>
       </div>
 

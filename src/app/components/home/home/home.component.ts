@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
+import { StorageService } from '../../_services/storage.service';
 
 
 @Component({
@@ -7,9 +8,17 @@ import { Subscription } from 'rxjs/internal/Subscription';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  isLoggedIn= false;
+  ngOnInit(): void {
+    if(this.storage.isLoggedIn()){
+      this.isLoggedIn = true;
+    }
+  }
 
-  @Input() isLoggedIn!: boolean;
+  constructor(private storage: StorageService){}
+
+  //@Input() isLoggedIn!: boolean;
   eventBusSub?: Subscription;
 
 }
