@@ -1,9 +1,10 @@
-.hero{
+.hero {
   padding-top: 30px;
-  margin-top: -80px!important;
+  padding-left: 75px !important;
+  padding-right: 75px !important;
+  margin-top: -80px !important;
   margin-bottom: -3px;
   background-color: #00050B !important;
-
 }
 
 h1 {
@@ -11,60 +12,95 @@ h1 {
 }
 
 .banner-image {
-  background-image: url(../../../assets/img/oblo.jpg);
+  background-image: url("../../../assets/img/oblo.jpg");
   background-size: cover;
   background-position: center;
-  height: 620px;
+  min-height: 620px;
   padding-top: 100px;
   margin-top: -80px !important;
 }
 
-.banner-image p{
+.banner-image p {
   line-height: 45px;
 }
 
 
-iframe{
-  max-height: 300px!important;
- // border-top-left-radius:15px;
-  //border-top-right-radius: 15px;
-  border: none!important;
-
+iframe {
+  max-height: 300px !important;
+  border: none !important;
 }
 
 .card {
-  border: none!important;
+  border: none !important;
   background-color: transparent;
 }
 
-
-h5{
-  color: orangered!important;
+.gutter {
+  --bs-gutter-x: 5rem;
 }
 
-.card-img-top{
+h5 {
+  color: orangered !important;
+}
+
+.card-img-top {
   border-radius: 0;
-  max-height: 250px!important;
+  max-height: 250px !important;
   object-fit: cover;
 }
 
-.card-body{
+.card-body {
   background: linear-gradient(#01052e, #00050B);
-  border: none!important;
-  //border-bottom-left-radius: 20px;
-  //border-bottom-right-radius: 20px;
+  border: none !important;
 }
 
-.btn{
+.btn {
   background-color: orangered;
   border: 1px solid orangered;
   font-weight: 600;
   opacity: 1;
+}
+
+.btn:hover {
+  background-color: rgb(192, 51, 0);
+  border-color: rgb(192, 51, 0);
+}
+
+@media screen and (max-width: 992px) {
+  .gutter {
+    --bs-gutter-x: 4rem;
   }
 
-  .btn:hover{
-    background-color: rgb(192, 51, 0);
-    border-color: rgb(192, 51, 0);
+  .hero {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
+  .banner-image {
+    min-height: 700px;
   }
 
+  h1 {
+    padding-top: 70px !important;
+  }
 
+  .hero {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+
+  .gutter {
+    --bs-gutter-x: 7rem;
+  }
+
+  iframe {
+    max-height: 450px !important;
+  }
+
+  .card-body {
+    padding: 25px 80px;
+  }
+}

@@ -1,49 +1,47 @@
-footer{
-  background-color:#00050B ;
-
+footer {
+  background-color: #00050B;
 }
 
-.line{
-  margin: 0 auto; /* centra la riga orizzontalmente */
+.line {
+  margin: 0 auto;
+  /* centra la riga orizzontalmente */
   color: orangered;
   border: 1px solid;
   opacity: 1;
   width: 75%;
-  display: block; /* assicura che la riga abbia sempre la larghezza impostata */
+  display: block;
+  /* assicura che la riga abbia sempre la larghezza impostata */
 }
 
-
-
-a{
+a {
   text-decoration: none;
 }
 
-hr{
-  color:transparent;
+hr {
+  color: transparent;
 }
 
-i{
+i {
   color: orangered;
 }
 
-i:hover{
+i:hover {
   color: #c93600;
   opacity: 1;
 }
 
-img{
+img {
   margin-bottom: 20px;
   max-width: 100%;
   width: 110px;
   cursor: default;
-
 }
 
-a{
+a {
   color: white;
   text-decoration: none;
 }
 
-.info{
+.info {
   line-height: 35px;
 }

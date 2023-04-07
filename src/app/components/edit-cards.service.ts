@@ -14,7 +14,7 @@ const httpOptions = {
 export class EditCardsService {
   constructor(private http: HttpClient) { }
 
-  cards(immagine:string, nome_comune:string, nome_scientifico:string, habitat:string, descrizione:string): Observable<any>{
+  cards(immagine: string, nome_comune: string, nome_scientifico: string, habitat: string, descrizione: string): Observable<any> {
     return this.http.post(
       CARDS,
       {

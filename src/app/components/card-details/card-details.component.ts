@@ -5,18 +5,18 @@ import { HttpClient } from '@angular/common/http';
 interface Card {
   id: number;
   immagine: string;
-  nome_comune:string
-  nome_scientifico:string
+  nome_comune: string
+  nome_scientifico: string
   habitat: string;
   descrizione: string;
 }
-
 
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
   styleUrls: ['./card-details.component.scss']
 })
+
 export class CardDetailsComponent implements OnInit {
 
   immagine = '';
@@ -25,12 +25,9 @@ export class CardDetailsComponent implements OnInit {
   habitat = '';
   descrizione = '';
 
-
-
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
-    //private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -47,7 +44,5 @@ export class CardDetailsComponent implements OnInit {
       });
     });
   }
-
-
 }
 

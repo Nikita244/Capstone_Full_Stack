@@ -1,25 +1,21 @@
-
-h2{
+h2 {
   font-weight: 500;
 }
+
 label {
   display: block;
   margin-top: 20px;
   color: white;
   font-weight: 500;
-
-
 }
 
 .card-container.card {
   width: 550px !important;
   padding: 40px 40px;
   border-radius: 20px;
-  background: rgba(123, 123, 123, 0.120)!important;
+  background: rgba(123, 123, 123, 0.120) !important;
   backdrop-filter: blur(25px);
   border: 1px solid white;
-
-
 }
 
 .card {
@@ -36,20 +32,17 @@ label {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-
-#register:hover{
-font-weight: bolder;
-transition: 0.1s;
-color: orangered!important;
+#register:hover {
+  font-weight: bolder;
+  transition: 0.1s;
+  color: orangered !important;
 }
 
-.form-control{
-  background-color: rgba(255, 255, 255, 0)!important;
+.form-control {
+  background-color: rgba(255, 255, 255, 0) !important;
   color: white;
   border-radius: 50px;
 }
-
-
 
 .register {
   min-height: 100vh;
@@ -61,51 +54,50 @@ color: orangered!important;
   background: url('../../../../assets/img/abisso.jpg')no-repeat;
   background-position: center;
   background-size: cover;
-
 }
 
-.btn{
-background-color: transparent;
-border: 1px solid white;
-font-weight: 600;
+.btn {
+  background-color: transparent;
+  border: 1px solid white;
+  font-weight: 600;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: orangered;
-  border-color: orangered ;
+  border-color: orangered;
 }
 
 input.form-control {
   border: none;
   border-bottom: 1px solid white;
   border-radius: 0;
-  box-shadow: none!important;
+  box-shadow: none !important;
 }
 
-.form-control:focus{
+.form-control:focus {
   border-color: orangered;
 }
 
-.form-control.is-invalid{
+.form-control.is-invalid {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ff4500'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff4500' stroke='none'/%3e%3c/svg%3e");
 }
 
-input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover {
-  -webkit-box-shadow: none!important;
-  background-color: transparent!important;
-}
-input:-internal-autofill-selected{
-  background-color: transparent!important;
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: none !important;
+  background-color: transparent !important;
 }
 
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
+input:-webkit-autofill:focus input:-webkit-autofill,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
@@ -115,28 +107,27 @@ select:-webkit-autofill:focus {
 }
 
 .invalid-feedback {
-background-color: #ffffff75;
-border-radius: 5px;
-color: orangered;
-font-size: 16px;
-font-weight: 600;
-padding: 5px ;
+  background-color: #ffffff75;
+  border-radius: 5px;
+  color: orangered;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
 }
 
-#alert{
+#alert {
   margin-top: 20px;
 }
 
-.bi{
+.bi {
   font-size: 28px;
   vertical-align: middle;
   padding-right: 7px;
 }
 
-.bi:hover{
+.bi:hover {
   color: orangered;
   transition: 0.2s;
-
 }
 
 .indietro {
@@ -144,46 +135,56 @@ padding: 5px ;
   align-items: center;
 }
 
-.indietro:hover{
+.indietro:hover {
   color: orangered;
   transition: 0.2s;
 }
 
-#recaptcha{
+#recaptcha {
   display: flex;
   align-items: center;
 }
 
-input:focus, input:valid { appearance:none!important; }
+input:focus,
+input:valid {
+  appearance: none !important;
+}
 
-.form-control{
-  background-color: trasparent!important;
+.form-control {
+  background-color: trasparent !important;
   color: white;
   border-radius: 50px;
 }
 
-.alert-success{
-  border: none!important;
-  background-color: transparent!important;
-  color: white!important;
+.alert-success {
+  border: none !important;
+  background-color: transparent !important;
+  color: white !important;
   font-size: 18px;
 }
 
-.login{
-  color: orangered!important;
+.login {
+  color: orangered !important;
 }
 
-.login:hover{
+.login:hover {
   text-decoration: underline orangered;
+}
+
+.alert {
+  background-color: rgba(255, 255, 255, 0.671);
+  border-color: orangered;
+  color: orangered;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 575px) {
   #nomecognomne {
     flex-direction: column;
-   }
+  }
 
-   .register{
-    padding-right: 20px!important;
-    padding-left: 20px!important;
-   }
+  .register {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
 }

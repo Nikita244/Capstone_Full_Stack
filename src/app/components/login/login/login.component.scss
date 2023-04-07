@@ -1,21 +1,19 @@
-
-h2{
+h2 {
   font-weight: 500;
 }
+
 label {
   display: block;
   margin-top: 20px;
   color: white;
   font-weight: 500;
-
-
 }
 
 .card-container.card {
   max-width: 450px !important;
   padding: 40px 40px;
   border-radius: 20px;
-  background: rgba(123, 123, 123, 0.120)!important;
+  background: rgba(123, 123, 123, 0.120) !important;
   backdrop-filter: blur(25px);
   border: 1px solid white;
 }
@@ -23,8 +21,6 @@ label {
 .card {
   background-color: #f7f7f7;
   padding: 20px 25px 30px;
-  /*margin: 0 auto 25px;
-  margin-top: 50px;*/
   margin: 0 auto;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -44,19 +40,17 @@ label {
   border-radius: 50%;
 }
 
-#register:hover{
-font-weight: bolder;
-transition: 0.1s;
-color: orangered!important;
+#register:hover {
+  font-weight: bolder;
+  transition: 0.1s;
+  color: orangered !important;
 }
 
-.form-control{
-  background-color: rgba(255, 255, 255, 0)!important;
+.form-control {
+  background-color: rgba(255, 255, 255, 0) !important;
   color: white;
   border-radius: 50px;
 }
-
-
 
 .login-page {
   padding-top: 30px;
@@ -68,51 +62,46 @@ color: orangered!important;
   background: url('../../../../assets/img/abisso.jpg')no-repeat;
   background-position: center;
   background-size: cover;
-
-
 }
 
-.btn{
-background-color: transparent;
-border: 1px solid white;
-font-weight: 600;
+.btn {
+  background-color: transparent;
+  border: 1px solid white;
+  font-weight: 600;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: orangered;
-  border-color: orangered ;
+  border-color: orangered;
 }
 
 input.form-control {
   border: none;
   border-bottom: 1px solid white;
   border-radius: 0;
-  box-shadow: none!important;
-
+  box-shadow: none !important;
 }
 
-.form-control:focus{
+.form-control:focus {
   border-color: orangered;
 }
 
-.form-control.is-invalid{
+.form-control.is-invalid {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ff4500'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff4500' stroke='none'/%3e%3c/svg%3e");
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:hover {
-    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0) inset !important;
-    background-color: rgba(255, 255, 255, 0) !important;
+  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0) inset !important;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
+input:-webkit-autofill:focus input:-webkit-autofill,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
@@ -122,26 +111,25 @@ select:-webkit-autofill:focus {
 }
 
 .invalid-feedback {
-background-color: #ffffff75;
-border-radius: 5px;
-color: orangered;
-font-size: 16px;
-font-weight: 600;
-padding: 5px ;
+  background-color: #ffffff75;
+  border-radius: 5px;
+  color: orangered;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
 }
 
-#alert{
+#alert {
   margin-top: 20px;
 }
 
-.bi{
+.bi {
   font-size: 28px;
   vertical-align: middle;
   padding-right: 7px;
-
 }
 
-.bi:hover{
+.bi:hover {
   color: orangered;
   transition: 0.2s;
 }
@@ -151,7 +139,14 @@ padding: 5px ;
   align-items: center;
 }
 
-.indietro:hover{
+.indietro:hover {
   color: orangered;
   transition: 0.2s;
+}
+
+.alert {
+  background-color: rgba(255, 255, 255, 0.671);
+  border-color: orangered;
+  color: orangered;
+  font-weight: bolder;
 }

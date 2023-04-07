@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
         if (err && err.error && err.error.message) {
           this.errorMessage = err.error.message;
         } else {
-          this.errorMessage = 'username e/o password non validi!';
+          this.errorMessage = 'Username e/o password non validi!';
         }
         this.isLoginFailed = true;
       }

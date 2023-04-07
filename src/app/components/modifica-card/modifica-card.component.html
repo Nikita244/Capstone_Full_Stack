@@ -1,4 +1,3 @@
-
 <app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
 
 <div class="container-fluid body py-5">
@@ -10,30 +9,34 @@
 
       <div class="form-group">
         <label for="immagine">URL Immagine</label>
-        <input type="text" class="form-control" autocomplete="off" name="immagine" [(ngModel)]="immagine" required/>
+        <input type="text" class="form-control" autocomplete="off" name="immagine" [(ngModel)]="immagine" required />
       </div>
 
       <div class="form-group">
         <label for="immagine">Nome comune</label>
-        <input type="text" class="form-control" autocomplete="off" name="nome_comune" [(ngModel)]="nome_comune" required/>
+        <input type="text" class="form-control" autocomplete="off" name="nome_comune" [(ngModel)]="nome_comune"
+          required />
       </div>
 
       <div class="form-group">
         <label for="immagine">Nome scientifico</label>
-        <input type="text" class="form-control" autocomplete="off" name="nome_scientifico" [(ngModel)]="nome_scientifico" required/>
+        <input type="text" class="form-control" autocomplete="off" name="nome_scientifico"
+          [(ngModel)]="nome_scientifico" required />
       </div>
 
       <div class="form-group">
         <label for="immagine">Habitat</label>
-        <input type="text" class="form-control" autocomplete="off" name="habitat" [(ngModel)]="habitat" required/>
+        <input type="text" class="form-control" autocomplete="off" name="habitat" [(ngModel)]="habitat" required />
       </div>
 
       <div class="form-group">
         <label for="immagine">Descrizione</label>
-        <textarea type="text" class="form-control" autocomplete="off" name="descrizione" [(ngModel)]="descrizione" required></textarea>
+        <textarea type="text" class="form-control" autocomplete="off" name="descrizione" [(ngModel)]="descrizione"
+          required></textarea>
       </div>
 
-      <div *ngIf="errore" class="text-danger alert my-4 text-center">Tutti i campi sono obbligatori. <br>Si prega di compilare correttamente il form.</div>
+      <div *ngIf="errore" class="text-danger alert my-4 text-center">Tutti i campi sono obbligatori. <br>Si prega di
+        compilare correttamente il form.</div>
 
       <div class="form-group d-flex justify-content-center mt-4 ">
         <button class="btn btn-primary btn-block rounded-pill px-4" (click)="onSubmit()">Modifica</button>
@@ -46,7 +49,6 @@
 
     <div class="alert alert-success text-center fw-bold" *ngIf="isSuccessful">
       Modifica della card "{{nome_comune}}" avvenuta con successo!
-
       <br>
       <a class="btn btn-primary mt-5  rounded-pill px-4" routerLink="/all_cards">Indietro</a>
     </div>
@@ -56,9 +58,6 @@
     </div>
 
   </div>
-
 </div>
 
-
 <app-footer></app-footer>
-

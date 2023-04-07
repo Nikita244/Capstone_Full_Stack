@@ -14,18 +14,17 @@ import { ModificaCardComponent } from './components/modifica-card/modifica-card.
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'login', component: LoginComponent },
-  {path: 'register', component: RegisterComponent},
-  {path: 'contatti', component: ContattiComponent},
-  {path: 'cookie_policy', component: CookiePolicyComponent},
-  {path: 'tour', component: TourComponent,canActivate:[AuthguardGuard] },
-  {path: 'detail/:id',component: CardDetailsComponent},
-  {path: 'add_card',component: AddCardComponent ,canActivate:[AuthguardGuard,AdminGuard]},
-  {path: 'all_cards',component: AllCardsComponent,canActivate:[AuthguardGuard, AdminGuard]},
- {path: 'modify_card/:id',component: ModificaCardComponent,canActivate:[AuthguardGuard, AdminGuard]}
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'contatti', component: ContattiComponent },
+  { path: 'cookie_policy', component: CookiePolicyComponent },
+  { path: 'tour', component: TourComponent, canActivate: [AuthguardGuard] },
+  { path: 'detail/:id', component: CardDetailsComponent },
+  { path: 'add_card', component: AddCardComponent, canActivate: [AuthguardGuard, AdminGuard] },
+  { path: 'all_cards', component: AllCardsComponent, canActivate: [AuthguardGuard, AdminGuard] },
+  { path: 'modify_card/:id', component: ModificaCardComponent, canActivate: [AuthguardGuard, AdminGuard] }
 ];
-
 
 
 @NgModule({

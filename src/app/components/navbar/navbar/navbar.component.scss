@@ -1,51 +1,51 @@
-.navbar{
-  background-color: transparent!important;
+.navbar {
+  background-color: transparent !important;
   height: 80px;
 }
 
-.navbar-nav li > a{
+.navbar-nav li>a {
   color: white;
 }
-.navbar-nav li > a:hover{
+
+.navbar-nav li>a:hover {
   color: #ffffff;
 }
 
-img{
+img {
   margin-top: 10px;
   max-width: 100%;
   width: 110px;
-
 }
 
-.navbar-nav li.active > a::after {
+.navbar-nav li.active>a::after {
   width: 100%;
 }
 
-.navbar-nav li > a:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 3px;
-    background: #ff4500;
-    transition: width .3s;
-}
-.navbar-nav li > a:hover::after {
-    width: 100%;
-}
-
-.navbar-nav .nome  > a:after{
+.navbar-nav li>a:after {
   content: '';
   display: block;
-  background:none;
-
+  width: 0;
+  height: 3px;
+  background: #ff4500;
+  transition: width .3s;
 }
 
-.navbar-nav li > a.active:after {
+.navbar-nav li>a:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nome>a:after {
+  content: '';
+  display: block;
+  background: none;
+}
+
+.navbar-nav li>a.active:after {
   width: 100%;
 }
 
 
-.navbar{
+.navbar {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
@@ -57,29 +57,25 @@ img{
   box-shadow: 0 0 0 0.2rem rgba(200, 200, 200, 0.5);
 }
 
-.dropdown-toggle::after{
-  background: none!important;
+.dropdown-toggle::after {
+  background: none !important;
 }
 
-.btn-close{
+.btn-close {
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff4500'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
-
-  --bs-btn-close-opacity: none!important;
-
+  --bs-btn-close-opacity: none !important;
   --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(252, 73, 19, 0.247);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
 
-  .offcanvas-end{
-    background-color: rgba(26, 26, 26, 0.849)!important;
+  .offcanvas-end {
+    background-color: rgba(26, 26, 26, 0.849) !important;
     backdrop-filter: blur(5px);
   }
 
-  .logout{
-    margin-left: 0!important;
+  .logout {
+    margin-left: 0 !important;
   }
 
 }
-
-

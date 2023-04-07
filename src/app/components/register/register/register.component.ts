@@ -9,8 +9,8 @@ import { AuthService } from '../../_services/auth.service';
 })
 export class RegisterComponent implements OnInit {
   form: any = {
-    nome:null,
-    cognome:null,
+    nome: null,
+    cognome: null,
     username: null,
     email: null,
     password: null
@@ -21,11 +21,11 @@ export class RegisterComponent implements OnInit {
   errorMessage = '';
   showPassword = false;
 
-  token: string|undefined;
+  token: string | undefined;
 
   formSubmitted = false;
 
-  constructor(private authService: AuthService) { this.token = undefined;}
+  constructor(private authService: AuthService) { this.token = undefined; }
 
   ngOnInit(): void {
   }
@@ -46,7 +46,6 @@ export class RegisterComponent implements OnInit {
       error: err => {
         this.errorMessage = err.error.message;
         this.isSignUpFailed = true;
-
       }
     });
   }

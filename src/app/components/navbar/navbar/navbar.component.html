@@ -1,17 +1,22 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-body-tertiary ">
   <div class="container-fluid">
+
     <a class="navbar-brand" href="/">
       <img src="assets/img/logo-acquario-di-genova-negative.png" alt="logo">
     </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel">
+
       <div class="offcanvas-header">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+
       <div class="offcanvas-body">
         <ul class="navbar-nav flex-grow-1 justify-content-end pe-3">
           <li class="nav-item">
@@ -45,9 +50,6 @@
             <a class="nav-link text-white fw-bold" routerLink="login" *ngIf="!isLoggedIn">Login</a>
           </li>
 
-
-
-
           <li class="nav-item">
             <a class="nav-link mb-2 btn-tertiary rounded-pill me-2 text-white fw-bold  logout" (click)="logout()"
               routerLink="/" *ngIf="isLoggedIn">
@@ -55,7 +57,6 @@
             </a>
           </li>
         </ul>
-
       </div>
     </div>
   </div>

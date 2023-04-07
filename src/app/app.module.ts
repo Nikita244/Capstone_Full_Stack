@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/register/register/register.component';
-
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './components/_helpers/http.interceptor';
@@ -19,15 +16,11 @@ import { TourComponent } from './components/tour/tour.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
-import { AddCardComponent} from './components/add-card/add-card.component';
+import { AddCardComponent } from './components/add-card/add-card.component';
 import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
-
-
-
-
 
 
 @NgModule({
@@ -46,9 +39,8 @@ import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.
     AllCardsComponent,
     ModificaCardComponent,
     CookiePolicyComponent
-
-
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -57,9 +49,8 @@ import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.
     RecaptchaModule,
     RecaptchaFormsModule,
     NgxPaginationModule
-
-
   ],
+
   providers: [httpInterceptorProviders, {
     provide: RECAPTCHA_SETTINGS,
     useValue: {

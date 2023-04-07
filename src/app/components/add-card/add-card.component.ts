@@ -11,8 +11,8 @@ export class AddCardComponent {
   @Input() isLoggedIn!: boolean;
 
   form: any = {
-    immagine:null,
-    nome_comune:null,
+    immagine: null,
+    nome_comune: null,
     nome_scientifico: null,
     habitat: null,
     descrizione: null
@@ -28,11 +28,11 @@ export class AddCardComponent {
 
   constructor(
     private editcardsservice: EditCardsService
-  ) {}
+  ) { }
 
 
   onSubmit(): void {
-    const {immagine, nome_comune, nome_scientifico, habitat, descrizione } = this.form;
+    const { immagine, nome_comune, nome_scientifico, habitat, descrizione } = this.form;
 
     this.formSubmitted = true;
 

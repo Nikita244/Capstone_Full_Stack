@@ -9,12 +9,12 @@
           Un eccezionale <span style="color:orangered;font-weight:bold">Tour virtuale interattivo</span> tra le vasche
           più iconiche dell'Acquario di Genova per celebrare il trentesimo anniversario e ammirare la sua grande
           biodiversità! </p>
-        <div class="d-flex"  *ngIf="!isLoggedIn">
+        <div class="d-flex" *ngIf="!isLoggedIn">
           <a href="" class="btn btn-primary text-center text-white me-2 rounded-pill px-4 py-2 fw-bold tuffo"
             routerLink="/tour">Accedi</a>
         </div>
         <div class="d-flex" *ngIf="isLoggedIn">
-            <a href="" class="btn btn-primary text-center text-white me-2 rounded-pill px-4 py-2 fw-bold tuffo"
+          <a href="" class="btn btn-primary text-center text-white me-2 rounded-pill px-4 py-2 fw-bold tuffo"
             routerLink="/tour">Tuffati</a>
         </div>
       </div>
@@ -22,7 +22,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="container-fluid descr ">
   <div class="px-4 pt-5  text-center pb-5">
@@ -35,7 +34,6 @@
         edutainment, sollecitare un impegno personale per contribuire alla sua salvaguardia.</p>
     </div>
   </div>
-
 
   <div class="container text-center text-white py-5">
     <div class="row">
@@ -63,11 +61,10 @@
   </div>
 </div>
 
-
 <div class="container-fluid  pt-4  squalo">
   <h3 class="display-6 fw-bold text-white  text-center w-75 m-auto pb-5 ">Vieni a scoprire l’Acquario di Genova e
     immergiti in un mondo di emozioni.</h3>
-  <div class="row flex-lg align-items-center g-5 pt-5 ps-4 ">
+  <div class="row flex-lg align-items-center g-5 pt-5 ps-5 ">
     <div class="col-10 col-sm-8 col-lg-6 descriptionsqualo">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5 ">La baia degli squali</p>
       <p class="lead text-white ">La grande vasca dedicata ai predatori del mare, che ospita, oltre a diverse specie di
@@ -78,11 +75,9 @@
   </div>
 </div>
 
-
-
 <div class="container-fluid  pt-4  pinguino">
-  <div class="row flex-row-reverse align-items-center g-5 pt-5 pe-4 description">
-    <div class="col-10 col-sm-8 col-lg-6  ">
+  <div class="row flex-row-reverse align-items-center g-5 pt-5 pe-5 description">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionpinguino">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">Il Regno dei Ghiacci</p>
       <p class="lead text-white ">La suggestiva scenografia con pareti laccate bianco a effetto ghiaccio accompagna i
         visitatori alla scoperta dell’inospitale continente antartico e delle aree subantartiche. Contrariamente a
@@ -93,8 +88,8 @@
 </div>
 
 <div class="container-fluid  pt-4   medusa">
-  <div class="row flex align-items-center g-5 pt-5 ps-4 description">
-    <div class="col-10 col-sm-8 col-lg-6 ">
+  <div class="row flex align-items-center g-5 pt-5 ps-5 description">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionmedusa">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">La danza delle meduse</p>
       <p class="lead text-white ">Una sala dove lasciarsi trasportare dal movimento fluttuante delle meduse: nove vasche
         per scoprire specie provenienti da diversi mari del mondo, e le fasi principali del ciclo vitale di questi
@@ -105,8 +100,8 @@
 </div>
 
 <div class="container-fluid  pt-4   biosfera">
-  <div class="row flex-row-reverse align-items-center g-5 pt-5 pe-4 description">
-    <div class="col-10 col-sm-8 col-lg-6 ">
+  <div class="row flex-row-reverse align-items-center g-5 pt-5 pe-5 description">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionbio">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">Un giardino botanico a Genova</p>
       <p class="lead text-white ">La Biosfera è la scenografica struttura sferica di vetro e acciaio situata nel Porto
         Antico di Genova, progettata dall’architetto Renzo Piano. È il luogo dove imparare a conoscere la fauna e la
@@ -118,8 +113,8 @@
 </div>
 
 <div class="container-fluid  pt-4   ibis">
-  <div class="row flex align-items-center g-5 pt-5 ps-4 description">
-    <div class="col-10 col-sm-8 col-lg-6 ">
+  <div class="row flex align-items-center g-5 pt-5 ps-5 description">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionibis">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">Ibis scarlatto</p>
       <p class="lead text-white ">Fra tutti gli animali ospitati nella Biosfera, l’ibis scarlatto, con il caratteristico
         piumaggio di un intenso color rosso, è sicuramente il più appariscente. Vive nelle mangrovie, nelle zone di
@@ -129,16 +124,13 @@
   </div>
 </div>
 
-
-  <div class="px-4 py-5  text-center visit">
-    <h3 class="display-6 fw-bold text-white py-3 pt-5">Acquario di Genova.<br>
-      Vieni a scoprire un oceano <br>di sorprese.</h3>
-    <div class="col-lg-6 mx-auto">
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      </div>
+<div class="px-4 py-5  text-center visit">
+  <h3 class="display-6 fw-bold text-white py-3 pt-5">Acquario di Genova.<br>
+    Vieni a scoprire un oceano <br>di sorprese.</h3>
+  <div class="col-lg-6 mx-auto">
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
     </div>
   </div>
-
+</div>
 
 <app-footer></app-footer>
-

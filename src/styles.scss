@@ -1,10 +1,9 @@
 ::-webkit-scrollbar {
   width: 7px;
-
 }
 
 ::-webkit-scrollbar-track {
-  background-color: none;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -15,7 +14,6 @@
   background-color: rgb(204, 56, 2);
 }
 
-
 body{
-  background-color: rgb(33, 33, 33);
+  background-color: rgb(49, 49, 49);
 }

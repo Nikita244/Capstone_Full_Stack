@@ -1,5 +1,5 @@
 .banner-image {
-  background-image: url(../../../../assets/img/30anni.jpg);
+  background-image: url("../../../../assets/img/30anni.jpg");
   background-size: cover;
   background-position: center;
   height: 620px;
@@ -27,20 +27,17 @@ p {
   line-height: 35px;
 }
 
-
 .descr {
-  background-image: url(../../../../assets/img/background-01_UN.jpg);
+  background-image: url("../../../../assets/img/background-01_UN.jpg");
   background-size: cover;
   background-position: center;
   margin-top: -1px;
-
 }
 
 h3 {
   font-weight: 500 !important;
   padding-top: 10px;
 }
-
 
 hr {
   margin: auto;
@@ -60,7 +57,7 @@ hr {
   min-height: 800px;
 }
 
-.squalo p{
+.squalo p {
   text-align: justify;
 }
 
@@ -75,16 +72,12 @@ hr {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 400px;
   overflow-x: hidden;
   margin-top: -1px;
   min-height: 600px;
-  //------------------------
-  //---------------------
-  //FARE MEDIA A 1200 CON MIN HEIGHT 600 PX E ALLINEAMENTO TESTO
 }
 
-.pinguino p{
+.pinguino p {
   text-align: justify;
 }
 
@@ -93,13 +86,12 @@ hr {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 400px;
   overflow-x: hidden;
   margin-top: -1px;
   min-height: 600px;
 }
 
-.medusa p{
+.medusa p {
   text-align: justify;
 }
 
@@ -108,13 +100,12 @@ hr {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 400px;
   overflow-x: hidden;
   margin-top: -1px;
   min-height: 600px;
 }
 
-.biosfera p{
+.biosfera p {
   text-align: justify;
 }
 
@@ -123,32 +114,74 @@ hr {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 400px;
   overflow-x: hidden;
   margin-top: -1px;
   min-height: 600px;
 }
 
-.ibis p{
+.ibis p {
   text-align: justify;
 }
 
 .visit {
-
   background-image: url("../../../../assets/img/background-06.jpg");
   background-size: cover;
   background-position: center;
-  height: 500px;
+  min-height: 500px;
   margin-bottom: -2px;
-
 }
 
-
-.visit h3{
-  padding-top: 2.5em!important;
+.visit h3 {
+  padding-top: 2.5em !important;
   line-height: 45px;
 }
 
+@media screen and (min-width: 1300px) {
 
+  .banner-image,
+  .descr,
+  .squalo,
+  .pinguino,
+  .medusa,
+  .biosfera,
+  .ibis,
+  .visit {
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
 
+    p {
+      font-size: 22px;
+    }
+  }
 
+  .descriptionsqualo {
+    padding-top: 170px;
+  }
+
+  .descriptionpinguino {
+    padding-top: -10px;
+  }
+
+  .descriptionmedusa,
+  .descriptionbio,
+  .descriptionibis {
+    padding-top: 40px;
+  }
+
+  .banner-image {
+    min-height: 700px;
+  }
+
+  .visit {
+    min-height: 800px;
+  }
+
+  .descr {
+    min-height: 700px;
+  }
+
+  .visit {
+    padding-top: 10em !important;
+    line-height: 55px;
+  }
+}

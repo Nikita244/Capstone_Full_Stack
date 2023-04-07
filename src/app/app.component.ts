@@ -66,15 +66,13 @@ export class AppComponent {
         }
       });
 
-      // Aggiungi la regola CSS per rimuovere l'underline del link "Ho capito"
+
       let style = document.createElement('style');
       style.innerHTML = '.cc-window .cc-dismiss a { text-decoration: none; }';
       document.head.appendChild(style);
     } else {
       // Se il valore è stato già impostato, non fare nulla
     }
-
-
 
     this.authService.isLoggedIn.subscribe((loggedIn) => {
       this.isLoggedIn = loggedIn;
@@ -83,12 +81,9 @@ export class AppComponent {
     if (this.isLoggedIn) {
       const user = this.storageService.getUser();
       this.roles = user.roles;
-
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-
       this.username = user.username
-
     }
 
     this.eventBusSub = this.eventBusService.on('logout', () => {
@@ -101,7 +96,6 @@ export class AppComponent {
       next: res => {
         console.log(res);
         this.storageService.clean();
-
         window.location.reload();
       },
       error: err => {

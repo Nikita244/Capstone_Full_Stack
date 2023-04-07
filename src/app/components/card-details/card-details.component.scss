@@ -4,17 +4,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
   }
 
   .card {
     margin: 0 auto;
     max-width: 640px;
-  }
-
-  .card {
     border: none !important;
     border-radius: 0;
+    box-shadow: 0px 1px 25px black;
   }
 
   .card-body {
@@ -34,7 +31,6 @@
     object-position: center;
   }
 
-
   .bi {
     display: inline-block;
     vertical-align: -0.220em;
@@ -47,7 +43,6 @@
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 10px;
-
   }
 
   .btn:hover {

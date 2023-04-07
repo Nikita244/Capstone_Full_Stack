@@ -6,8 +6,8 @@ import { PaginationService } from '../_services/pagination.service';
 interface Card {
   id: number;
   immagine: string;
-  nome_comune:string
-  nome_scientifico:string
+  nome_comune: string
+  nome_scientifico: string
   habitat: string;
   descrizione: string;
 }
@@ -17,7 +17,7 @@ interface Card {
   templateUrl: './all-cards.component.html',
   styleUrls: ['./all-cards.component.scss']
 })
-export class AllCardsComponent implements OnInit{
+export class AllCardsComponent implements OnInit {
 
   @Input() isLoggedIn!: boolean;
 
@@ -33,24 +33,15 @@ export class AllCardsComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
-   /* const url = `http://localhost:8080/api/cards_page`;
-    this.http.get<Card[]>(url).subscribe((response) => {
-      this.cards = response;
-      console.log(response);
-    });*/
     this.getGardsPage();
   }
 
-  getGardsPage():void{
-    this.pagination.getCardsPaginated().subscribe(cards =>{
+  getGardsPage(): void {
+    this.pagination.getCardsPaginated().subscribe(cards => {
       this.cards = cards;
     })
 
   }
-
- /* elimina(id:number){
-    console.log(id);
-  }*/
 
   elimina(id: number) {
 
@@ -69,8 +60,8 @@ export class AllCardsComponent implements OnInit{
           this.cards = this.cards.filter((card) => card.id !== id);
           console.log(`Card con ID ${id} rimossa con successo.`);
 
-         // Mostra un messaggio di conferma
-        window.alert(`La Card "${nomeComuneInMaiuscolo}" è stata eliminata con successo.`);
+          // Mostra un messaggio di conferma
+          window.alert(`La Card "${nomeComuneInMaiuscolo}" è stata eliminata con successo.`);
         },
         (error) => {
           console.error(error);
@@ -79,9 +70,8 @@ export class AllCardsComponent implements OnInit{
     }
   }
 
-  modifica(id:number):void{
-    this.router.navigate(['modify_card/'+id])
+  modifica(id: number): void {
+    this.router.navigate(['modify_card/' + id])
   };
-
 }
 

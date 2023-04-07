@@ -10,11 +10,9 @@ import { Cards } from '../cards';
   templateUrl: './modifica-card.component.html',
   styleUrls: ['./modifica-card.component.scss']
 })
-export class ModificaCardComponent implements OnInit, Cards{
+export class ModificaCardComponent implements OnInit, Cards {
 
   @Input() isLoggedIn!: boolean;
-
-
 
   isSuccessful = false;
   isFailed = false;
@@ -31,9 +29,6 @@ export class ModificaCardComponent implements OnInit, Cards{
 
   constructor(
     private editcardsservice: EditCardsService, private route: ActivatedRoute, private http: HttpClient, private router: Router) { }
-
-
-
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -63,25 +58,21 @@ export class ModificaCardComponent implements OnInit, Cards{
     }
 
     const modifica = {
-      "immagine":  this.immagine,
-      "nome_comune":  this.nome_comune,
-      "nome_scientifico":  this.nome_scientifico,
-      "habitat":  this.habitat,
-      "descrizione":  this.descrizione
+      "immagine": this.immagine,
+      "nome_comune": this.nome_comune,
+      "nome_scientifico": this.nome_scientifico,
+      "habitat": this.habitat,
+      "descrizione": this.descrizione
     }
     this.route.params.subscribe(params => {
       const id = params['id'];
       const url = `http://localhost:8080/api/modify_card/${id}`;
-      this.http.post(url, modifica, { responseType: 'json' }).subscribe(response=>{
+      this.http.post(url, modifica, { responseType: 'json' }).subscribe(response => {
         console.log("avvenuto con successo");
-        this.isSuccessful = true; // imposto la proprietà a true
-        //mi riporta alla tabella
-        ///this.router.navigate(['/all_cards']);
+        this.isSuccessful = true;
         window.scrollTo(0, 0); // scrolla in cima alla pagina
-
-      }, (error =>{
+      }, (error => {
         console.log(error);
-
       }));
     });
   }

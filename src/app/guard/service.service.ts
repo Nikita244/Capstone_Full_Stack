@@ -7,11 +7,11 @@ export class ServiceService {
 
   constructor() { }
 
-  IsLoggedIn(){
+  IsLoggedIn() {
     const token = sessionStorage.getItem('auth-user')
-    if(token != null){
+    if (token != null) {
       return true;
-    }else{
+    } else {
       return false;
     }
   }

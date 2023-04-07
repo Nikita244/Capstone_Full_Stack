@@ -1,24 +1,21 @@
-.hero{
+.hero {
   padding-top: 100px;
-  margin-top: -80px!important;
+  margin-top: -80px !important;
   margin-bottom: -2px;
   overflow-x: hidden;
-   background-image: url(../../../assets/img/biosfera-contatti.jpg);
+  background-image: url(../../../assets/img/biosfera-contatti.jpg);
   background-size: cover;
   background-position: center;
-
 }
 
 h1 {
   font-weight: 400;
 }
 
-a{
+a {
   color: white;
   text-decoration: none;
 }
-
-
 
 .contact-area {
   background-attachment: fixed;
@@ -28,7 +25,7 @@ a{
   backdrop-filter: blur(10px);
 }
 
-.card{
+.card {
   border-radius: 0;
 }
 
@@ -39,10 +36,7 @@ a{
   margin-bottom: 10px;
   padding-left: 60px;
   margin-top: 30px;
-
 }
-
-
 
 .single_address i {
   background: #f6f6f6;
@@ -78,27 +72,25 @@ a{
   margin-top: 5px;
 }
 
-
 @media only screen and (max-width:768px) {
   .contact {
-      margin-bottom: 60px;
+    margin-bottom: 60px;
   }
 
-  .card{
+  .card {
     margin-bottom: 60px;
   }
 }
 
 
-@media only screen and (max-width:992px){
-  .single_address{
+@media only screen and (max-width:992px) {
+  .single_address {
     padding-left: 0;
   }
 }
 
-@media only screen and (max-width:767px){
-  .single_address{
+@media only screen and (max-width:767px) {
+  .single_address {
     padding-left: 50px;
   }
 }
-
