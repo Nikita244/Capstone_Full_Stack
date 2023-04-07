@@ -28,7 +28,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let card of cards | paginate: { itemsPerPage: 5, currentPage: p } ">
+          <tr *ngFor="let card of cards | paginate: { itemsPerPage: 4, currentPage: p } ">
             <td class="icons">
               <a class="delete" title="Delete" data-toggle="tooltip" (click)="elimina(card.id)" ><i class="bi bi-trash3-fill ps-1 pe-1 text-danger"></i></a>
               <a class="modify" title="Modify" data-toggle="tooltip" (click)="modifica(card.id)"><i class="bi bi-pencil-square ps-2 text-primary"></i></a>
@@ -53,9 +53,5 @@
 
 
 </div>
-
-
-
-
 
 <app-footer></app-footer>
