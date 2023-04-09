@@ -24,6 +24,7 @@ export class AllCardsComponent implements OnInit {
   p: number = 1;
 
   cards: Card[] = [];
+  searchTerm = '';
 
   constructor(
     private http: HttpClient,
@@ -35,6 +36,11 @@ export class AllCardsComponent implements OnInit {
   ngOnInit(): void {
     this.getGardsPage();
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
+
 
   getGardsPage(): void {
     this.pagination.getCardsPaginated().subscribe(cards => {
@@ -73,5 +79,24 @@ export class AllCardsComponent implements OnInit {
   modifica(id: number): void {
     this.router.navigate(['modify_card/' + id])
   };
+
+  cerca() {
+    this.http.get<Card[]>(`http://localhost:8080/api/cerca_card/${this.searchTerm}`)
+      .subscribe(cards => {
+        this.cards = cards;
+        this.searchTerm = ''; // svuota il campo di ricerca
+      }, error => {
+        console.error(error);
+        alert(`Elemento con nome "${this.searchTerm}" non trovato`);
+        this.searchTerm = ''; // svuota il campo di ricerca
+      });
+  }
+
+
+
+
+
+
+
 }
 

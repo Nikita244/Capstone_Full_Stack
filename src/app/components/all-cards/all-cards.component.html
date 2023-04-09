@@ -4,13 +4,22 @@
   <div class="container title">
     <div class="table-title">
       <div class="row">
-        <div class="col-5">
-          <h2 class="fw-bold">Gestione Cards</h2>
+        <div class="col-md-4">
+        <h2 class="fw-bold" (click)="reloadPage()">Gestione Cards</h2>
         </div>
-        <div class="col-7">
-          <a class="btn btn-secondary rounded-pill fw-bolder" routerLink="/add_card"><i class="bi bi-plus-circle-fill"
-              id="plus"></i> <span class="pt-1">Aggiungi Card</span></a>
+
+        <div class="col-md-4 d-flex justify-content-center boxadd">
+          <a class="btn btn-secondary rounded-pill fw-bolder add" routerLink="/add_card"><i class="bi bi-plus-circle-fill"
+              id="plus"></i> <span class="pt-1 aggiungi">Aggiungi Card</span></a>
         </div>
+
+        <div class="col-md-4 d-flex justify-content-end boxcerca">
+          <div class="custom-search align-items-end cerca">
+            <input type="text" class="custom-search-input" placeholder="Cerca per nome" [(ngModel)]="searchTerm" (keyup.enter)="cerca()">
+            <button class="custom-search-botton" type="submit" (click)="cerca()"><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+
       </div>
     </div>
 

@@ -8,6 +8,10 @@
   margin-bottom: -2px;
 }
 
+h2{
+  cursor: pointer;
+}
+
 .table {
   margin-bottom: 0;
   background-color: #fdfdfd;
@@ -141,6 +145,55 @@ td .text {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #aaaaaa;
+}
+
+.aggiungi{
+  font-size: 16px;
+  margin-top: 0!important;
+}
+
+.custom-search {
+  position: relative;
+  max-width: 250px;
+}
+
+.custom-search-input {
+  width: 100%;
+  border: 1px solid #ffffff;
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 10px 100px 10px 20px;
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
+}
+.custom-search-botton {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border: 0;
+  background: rgb(255, 255, 255);
+  color: orangered;
+  outline: none;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 767px){
+  .add, .cerca{
+    float: none!important;
+    margin-left: 0!important;
+    margin-top: 15px;
+  }
+  .boxcerca, .boxadd{
+    justify-content: start !important;
+  }
+  .cerca{
+    width: 350px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
