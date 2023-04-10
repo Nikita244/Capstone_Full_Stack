@@ -83,6 +83,7 @@ export class AllCardsComponent implements OnInit {
   cerca() {
     this.http.get<Card[]>(`http://localhost:8080/api/cerca_card/${this.searchTerm}`)
       .subscribe(cards => {
+        this.p = 1;
         this.cards = cards;
         this.searchTerm = ''; // svuota il campo di ricerca
       }, error => {
