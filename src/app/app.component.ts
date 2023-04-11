@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { StorageService } from './components/_services/storage.service';
 import { AuthService } from './components/_services/auth.service';
 import { EventBusService } from './components/_shared/event-bus.service';
+import * as  AOS from "aos";
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,9 @@ export class AppComponent {
   ) { }
 
   ngOnInit(): void {
+
+    AOS.init({ once: true })
+    window.addEventListener('load', AOS.refresh)
 
     let consentStatus = localStorage.getItem('cookie-consent');
 

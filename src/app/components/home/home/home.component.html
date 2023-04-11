@@ -1,8 +1,8 @@
 <app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
 
 <div class="banner-image mt-5">
-  <div class="container pb-5">
-    <div class="row py-5 align-items-center">
+  <div class="container pb-5">"
+    <div class="row py-5 align-items-center"  data-aos="fade-right" data-aos-duration="2500">
       <div class="col-lg-6">
         <h1 class="display-4 mb-5 pt-5  text-white">Festeggiamo insieme 30 anni di Acquario</h1>
         <p class="h5 aa mb-5  text-white">
@@ -17,14 +17,17 @@
           <a href="" class="btn btn-primary text-center text-white me-2 rounded-pill px-4 py-2 fw-bold tuffo"
             routerLink="/tour">Tuffati</a>
         </div>
+        <div class="d-flex" *ngIf="isLoggedIn">
+
+        </div>
       </div>
 
     </div>
   </div>
 </div>
 
-<div class="container-fluid descr ">
-  <div class="px-4 pt-5  text-center pb-5">
+<div class="container-fluid descr" >
+  <div class="px-4 pt-5  text-center pb-5" data-aos="fade-up" data-aos-duration="3000">
     <h3 class="display-6 fw-bold text-white py-3">Il più grande Acquario d'Europa</h3>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4 pt-3 text-white">L’Acquario di Genova compie 30 anni. Un importante traguardo per la
@@ -35,7 +38,7 @@
     </div>
   </div>
 
-  <div class="container text-center text-white py-5">
+  <div class="container text-center text-white py-5" data-aos="fade-up" data-aos-duration="3000">
     <div class="row">
       <div class="col-md py-3">
         <i class="fa-solid fa-city fa-3x pb-3"></i>
@@ -65,7 +68,7 @@
   <h3 class="display-6 fw-bold text-white  text-center w-75 m-auto pb-5 ">Vieni a scoprire l’Acquario di Genova e
     immergiti in un mondo di emozioni.</h3>
   <div class="row flex-lg align-items-center g-5 pt-5 ps-5 ">
-    <div class="col-10 col-sm-8 col-lg-6 descriptionsqualo">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionsqualo" data-aos="fade-right" data-aos-duration="2500">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5 ">La baia degli squali</p>
       <p class="lead text-white ">La grande vasca dedicata ai predatori del mare, che ospita, oltre a diverse specie di
         squalo provenienti da vari ambienti marini, altri pesci interessanti. In prossimità del fondale, per esempio, si
@@ -77,7 +80,7 @@
 
 <div class="container-fluid  pt-4  pinguino">
   <div class="row flex-row-reverse align-items-center g-5 pt-5 pe-5 description">
-    <div class="col-10 col-sm-8 col-lg-6 descriptionpinguino">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionpinguino" data-aos="fade-left" data-aos-duration="2500">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">Il Regno dei Ghiacci</p>
       <p class="lead text-white ">La suggestiva scenografia con pareti laccate bianco a effetto ghiaccio accompagna i
         visitatori alla scoperta dell’inospitale continente antartico e delle aree subantartiche. Contrariamente a
@@ -89,7 +92,7 @@
 
 <div class="container-fluid  pt-4   medusa">
   <div class="row flex align-items-center g-5 pt-5 ps-5 description">
-    <div class="col-10 col-sm-8 col-lg-6 descriptionmedusa">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionmedusa" data-aos="fade-right" data-aos-duration="2500">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">La danza delle meduse</p>
       <p class="lead text-white ">Una sala dove lasciarsi trasportare dal movimento fluttuante delle meduse: nove vasche
         per scoprire specie provenienti da diversi mari del mondo, e le fasi principali del ciclo vitale di questi
@@ -101,7 +104,7 @@
 
 <div class="container-fluid  pt-4   biosfera">
   <div class="row flex-row-reverse align-items-center g-5 pt-5 pe-5 description">
-    <div class="col-10 col-sm-8 col-lg-6 descriptionbio">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionbio" data-aos="fade-left" data-aos-duration="2500">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">Un giardino botanico a Genova</p>
       <p class="lead text-white ">La Biosfera è la scenografica struttura sferica di vetro e acciaio situata nel Porto
         Antico di Genova, progettata dall’architetto Renzo Piano. È il luogo dove imparare a conoscere la fauna e la
@@ -112,9 +115,9 @@
   </div>
 </div>
 
-<div class="container-fluid  pt-4   ibis">
+<div class="container-fluid  pt-4 ibis">
   <div class="row flex align-items-center g-5 pt-5 ps-5 description">
-    <div class="col-10 col-sm-8 col-lg-6 descriptionibis">
+    <div class="col-10 col-sm-8 col-lg-6 descriptionibis" data-aos="fade-right" data-aos-duration="2500">
       <p class=" text-white pt-5 pb-3 fw-bold h4 pt-5">Ibis scarlatto</p>
       <p class="lead text-white ">Fra tutti gli animali ospitati nella Biosfera, l’ibis scarlatto, con il caratteristico
         piumaggio di un intenso color rosso, è sicuramente il più appariscente. Vive nelle mangrovie, nelle zone di
@@ -124,7 +127,7 @@
   </div>
 </div>
 
-<div class="px-4 py-5  text-center visit">
+<div class="px-4 py-5  text-center visit" >
   <h3 class="display-6 fw-bold text-white py-3 pt-5">Acquario di Genova.<br>
     Vieni a scoprire un oceano <br>di sorprese.</h3>
   <div class="col-lg-6 mx-auto">
