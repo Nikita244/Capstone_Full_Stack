@@ -21,6 +21,8 @@ import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
+import { CartComponent } from './components/cart/cart.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.
     AddCardComponent,
     AllCardsComponent,
     ModificaCardComponent,
-    CookiePolicyComponent
+    CookiePolicyComponent,
+    CartComponent
   ],
 
   imports: [
@@ -48,7 +51,8 @@ import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.
     HttpClientModule,
     RecaptchaModule,
     RecaptchaFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxPayPalModule
   ],
 
   providers: [httpInterceptorProviders, {

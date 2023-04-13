@@ -15,11 +15,15 @@ export class NavbarComponent implements OnInit {
   @Input() showAdminBoard!: boolean;
   roles: any;
   eventBusSub: any;
+  buyFlag:boolean=false;
+  qty:number=0;
 
   constructor(private storageService: StorageService,
     private authService: AuthService, private eventBusService: EventBusService) { }
 
   ngOnInit(): void {
+
+
     this.isLoggedIn = this.storageService.isLoggedIn();
     if (this.isLoggedIn) {
       const user = this.storageService.getUser();
@@ -32,6 +36,7 @@ export class NavbarComponent implements OnInit {
       this.logout();
     });
   }
+
 
   logout(): void {
     this.authService.logout().subscribe({

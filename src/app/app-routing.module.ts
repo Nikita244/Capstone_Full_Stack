@@ -12,6 +12,8 @@ import { AllCardsComponent } from './components/all-cards/all-cards.component';
 import { AdminGuard } from './guard/admin.guard';
 import { ModificaCardComponent } from './components/modifica-card/modifica-card.component';
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
+import { CartComponent } from './components/cart/cart.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'contatti', component: ContattiComponent },
   { path: 'cookie_policy', component: CookiePolicyComponent },
   { path: 'tour', component: TourComponent, canActivate: [AuthguardGuard] },
+  { path: 'cart', component: CartComponent, canActivate: [AuthguardGuard] },
   { path: 'detail/:id', component: CardDetailsComponent },
   { path: 'add_card', component: AddCardComponent, canActivate: [AuthguardGuard, AdminGuard] },
   { path: 'all_cards', component: AllCardsComponent, canActivate: [AuthguardGuard, AdminGuard] },

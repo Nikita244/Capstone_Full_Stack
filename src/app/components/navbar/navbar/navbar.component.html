@@ -25,6 +25,7 @@
             </a>
           </li>
 
+
           <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link fw-bold" aria-current="page" routerLink="/">Home</a>
           </li>
@@ -40,6 +41,15 @@
               Tour virtuale
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link  btn-tertiary rounded-pill text-white fw-bold" aria-current="page" routerLink="/cart"
+              routerLinkActive="active" *ngIf="isLoggedIn">
+              Biglietti
+            </a>
+          </li>
+
+
 
           <li class="nav-item">
             <a class="nav-link fw-bold" aria-current="page" routerLink="/contatti"

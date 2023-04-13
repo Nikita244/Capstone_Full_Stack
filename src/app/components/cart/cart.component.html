@@ -1,0 +1,59 @@
+<app-navbar [isLoggedIn]="isLoggedIn"></app-navbar>
+
+<div class="banner-image mt-5">
+  <div class="container pb-5">
+    <div class="row py-5" data-aos="fade-right" data-aos-duration="2000">
+      <div class="col-lg-6">
+        <h1 class="display-4 mb-3 pt-5  text-white">Biglietto</h1>
+        <p class="h5 aa mb-5  text-white">
+          Acquista comodamente online il tuo biglietto.</p>
+      </div>
+    </div>
+    <div class=" hero">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
+        <div class="card form">
+          <div class="card-header">
+            <h3 class="fw-bold py-3"><span></span> Acquista biglietti</h3>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let item of cartItems" class="row item-container pb-4 pt-3">
+              <div class="col-12 col-md-3 col-lg-2">
+                <img class="card-img-top img-fluid" [src]="item.image">
+              </div>
+              <div class="col-12 col-md-6 col-lg-8">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="card-title pt-3">{{ item.name }}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.description }}</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 col-lg-2">
+                <label for="quantity-input" class="form-label pt-2">Inserisci quantità</label>
+                <div class="input-group ">
+                  <input type="number" class="form-control text-center custom-input" [(ngModel)]="item.quantity" min="0"
+                    step="1" onfocus="if(this.value==='0') this.value=''">
+                  <div class="input-group-append">
+                    <span class="input-group-text">{{ item.price | currency:'EUR' }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p><i class="bi bi-info-circle-fill"></i> Bimbi da 0 a 3 anni accedono gratuitamente.</p>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-126  d-flex justify-content-end">
+                <h4>Totale: <strong>{{ getTotal() | currency:'EUR' }}</strong></h4>
+              </div>
+              <div class=" text-center pt-4">
+                <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
