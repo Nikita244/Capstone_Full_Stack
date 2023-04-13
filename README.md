@@ -4,13 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project installer
 
-  1.  ng update @angular/core@latest 
-  2.  npm install ng-recaptcha 
-  3.  npm install angular-autocomplete-off
-  4.  npm install ngx-pagination --save 
-  5.  npm install aos --save
-  6.  npm install ngx-paypal --save
-  7.  npm install jspdf
+ 1.  ng update @angular/core@latest 
+ 2.  npm install ng-recaptcha 
+ 3.  npm install angular-autocomplete-off
+ 4.  npm install ngx-pagination --save 
+ 5.  npm install aos --save
+ 6.  npm install ngx-paypal --save
+ 7.  npm install jspdf
 
 ## Development server
 
