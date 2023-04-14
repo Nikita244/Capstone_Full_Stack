@@ -1,8 +1,8 @@
 # Capstone_Full_Stack
 
 
-
-<a href=""><img src="https://cdn.discordapp.com/attachments/1062060184379347096/1096487899618345131/preview.png"></a>
+## 🎬 View the full video project 🎬
+<a href="https://drive.google.com/file/d/1I8MyhRMK8z0xi85tRwnDISp7LUtbw8qK/view?usp=share_link"><img src="https://cdn.discordapp.com/attachments/1062060184379347096/1096487899618345131/preview.png"></a>
 
 ## Installed Packages 📦
 
