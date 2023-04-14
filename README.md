@@ -2,7 +2,7 @@
 
 
 
-<a href="https://cdn.discordapp.com/attachments/1062060184379347096/1096487899618345131/preview.png"><img src="https://cdn.discordapp.com/attachments/1062060184379347096/1096434524327518218/image.png"></a>
+<a href=""><img src="https://cdn.discordapp.com/attachments/1062060184379347096/1096487899618345131/preview.png"></a>
 
 ## Installed Packages 📦
 
