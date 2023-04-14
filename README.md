@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
-## Installed Packages
+## Installed Packages 📦
 
  1.  ng update @angular/core@latest 
  2.  npm install ng-recaptcha 
