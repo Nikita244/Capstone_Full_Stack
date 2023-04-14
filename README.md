@@ -1,8 +1,12 @@
 # Capstone_Full_Stack
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+
+
+<a href="https://cdn.discordapp.com/attachments/1062060184379347096/1096487899618345131/preview.png" target="_blank"><img src="https://cdn.discordapp.com/attachments/1062060184379347096/1096434524327518218/image.png"></a>
 
 ## Installed Packages 📦
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
  1.  ng update @angular/core@latest 
  2.  npm install ng-recaptcha 
