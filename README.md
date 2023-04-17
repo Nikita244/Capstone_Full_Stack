@@ -8,7 +8,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
 
- 1.  ng update @angular/core@latest 
+ 1. “*” ng update @angular/core@latest 
  2.  npm install ng-recaptcha 
  3.  npm install angular-autocomplete-off
  4.  npm install ngx-pagination --save 
