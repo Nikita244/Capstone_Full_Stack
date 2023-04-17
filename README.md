@@ -1,4 +1,4 @@
-# 🪸 Genoa Aquarium - Virtual Tour
+# 🐠 Genoa Aquarium - Virtual Tour
 ## 💻 Full Stack Capstone Project
 
 This web application allows users to register and log in to take a 360-degree virtual tour of the most iconic rooms of the Genoa Aquarium.
